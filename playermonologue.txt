@@ -1,0 +1,40 @@
+[Intro Screen that slets you know you're playing "FLY THE COOP" ends...]
+
+PIM = player's inner monolgue
+
+PIM: *Looks around*. I like the clean-up job the park service did since the last time I was here...oh they missed one. I better go pick that up. 
+
+*Walk over to pick up HIGHLIGHTED plastic bottle*
+
+*Inventory alert triggered*
+
+PIM: Oh, holy shit. My backpack's only got () slots left. I have to remember to clean some things out later. 
+<let's player know about capacity, so there ar eno surprises later>
+
+<Maybe player with mess around with the inventory?>
+
+PIM: I should probably set up my camp site and light my campfire... *Highlight tent ropes, pegs, and tent sheet*
+
+PIM: Hmmm..maybe I should find something to hammer these down with
+*Player finds hammer*
+*Tent builds once player has all the items? How do we want to trigger this?*
+*Highlight logs and matches*
+*Trigger fire to start?*
+
+PIM: *The fire illuminates the scene more* Wow...the stars are so bright tonight. With this fire going I might find some stuff to get trippy...
+I'm in the middle of the woods in Oregon during shroom season. What else did I expect to do? I shouldn't pick them unless I'm REALLY sure I want to take them, though.
+*Goes to find shrooms*
+
+PIM: *Find shrooms* OH yeah! I think I got this same strain from Seth the other day...
+*Takes shrooms?*
+
+PIM: *fireflies light up* Ohhh....howojwhsodacflkjs....hehehehe... Oh god, I have to piss...these fireflies look like they know where to take a leak.
+
+*fireflies take him to the body*
+
+PIM: Holy...shit...holy...fucking shiiitttt maan...hey is that a book?...well...he's not gonna read it
+*Player picks up the journal*
+
+*AFTER WIN SCREEN DISAPPEARS*
+
+PIM: Well, I guess I better go find the shrooms HE took...and that money. Where are the mines around here?
