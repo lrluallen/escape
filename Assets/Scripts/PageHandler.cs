@@ -6,8 +6,7 @@ using System.IO;
 
 public class PageHandler : MonoBehaviour
 {
-    public Text pTxt;
-    public TextAsset entry;
+    public Text J_Text;
     public GameObject nextB;
     public GameObject prevB;
 
@@ -22,7 +21,7 @@ public class PageHandler : MonoBehaviour
         initObj = GameObject.FindGameObjectWithTag("Init");
         mScr = initObj.GetComponent<gameManager>();
         page = mScr.currPage;
-        pTxt.text = mScr.entries[page].text;
+        J_Text.text = mScr.entries[page].text;
         length = mScr.entries.Length;
         CheckButtons();
 
@@ -37,7 +36,7 @@ public class PageHandler : MonoBehaviour
     {
         page += dir;
         if (page >= 0 && page < length && mScr.unlocked[page])
-            pTxt.text = mScr.entries[page].text;
+            J_Text.text = mScr.entries[page].text;
         else
             page -= dir;
         mScr.currPage = page;
