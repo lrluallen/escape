@@ -21,6 +21,7 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Mouse controls camera
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         xRotation -= mouseY;
@@ -29,17 +30,22 @@ public class MouseLook : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        if (Input.GetKeyDown(KeyCode.LeftControl) && press)
+        // Check for input to activate/deactivate mouse
+        if (Input.GetKeyDown(KeyCode.Tab) && press)
         {
+            // activate mouse
             if (state)
                 Cursor.lockState = CursorLockMode.None;
+            // deactivate mouse
             else
                 Cursor.lockState = CursorLockMode.Locked;
+            // toggle for correct result text time
             state = !state;
+            // holding key does nothing
             press = false;
         }
-
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        // check for key release to allow for state change again
+        if (Input.GetKeyUp(KeyCode.Tab))
         {
             press = true;
         }
