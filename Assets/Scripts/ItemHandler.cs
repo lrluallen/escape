@@ -5,26 +5,29 @@ using UnityEngine;
 public class ItemHandler : MonoBehaviour
 {
 
+    // Gameobject with game manager script
     GameObject initObj;
-    public gameManager gmScr;
+    // manager script
+    gameManager gmScr;
+    // journal open/close button
     public GameObject J_OpenClose;
     // Start is called before the first frame update
     void Start()
     {
         initObj = GameObject.FindGameObjectWithTag("Init");
         gmScr = initObj.GetComponent<gameManager>();
+        // set state of button
         J_OpenClose.SetActive(gmScr.journal);
     }
 
-    // Update is called once per frame
-    void Update()
+    // Function so other scripts can easily get at the game manager script
+    public gameManager GetManager()
     {
-        if (gmScr.journal)
-        {
-            J_OpenClose.SetActive(true);
-        }
+        return gmScr;
     }
-    public void processItem(string item, int index=0)
+    
+    // Processes picked up items
+    public void processItem(string item)
     {
         switch (item)
         {

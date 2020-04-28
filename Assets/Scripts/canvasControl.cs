@@ -10,6 +10,7 @@ public class canvasControl : MonoBehaviour
 
     public void Awake()
     {
+        // Make sure all canvas start invisible
         length = groups.Length;
         for (int i = 0; i < length; ++i)
         {
@@ -21,6 +22,7 @@ public class canvasControl : MonoBehaviour
 
     public void ToggleHandler(CanvasGroup cGrp)
     {
+        // Toggle desired group, and make sure rest are off
         for (int i = 0; i < length; ++i)
         {
             if (groups[i].alpha == 1 || groups[i] == cGrp)
