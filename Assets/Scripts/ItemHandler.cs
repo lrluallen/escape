@@ -24,12 +24,16 @@ public class ItemHandler : MonoBehaviour
             J_OpenClose.SetActive(true);
         }
     }
-    public void processItem(string item)
+    public void processItem(string item, int index=0)
     {
-        if (item == "Journal")
+        switch (item)
         {
-            gmScr.journal = true;
-            J_OpenClose.SetActive(true);
+            case "Journal":
+                gmScr.journal = true;
+                J_OpenClose.SetActive(true);
+                break;
+            default:
+                break;
         }
     }
 
