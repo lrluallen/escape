@@ -7655,6 +7655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e071a8a6d10d7fe44b6ac9f987296bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gmScr: {fileID: 0}
   J_OpenClose: {fileID: 29719394}
 --- !u!1 &1394232984
 GameObject:
@@ -9321,9 +9322,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2105481081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed05a8a01b1c48439b56cb24531c474, type: 3}
+  m_Script: {fileID: 11500000, guid: 04dfc2142eea4d740a9b1142c85d0e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Identity: Journal
 --- !u!1 &2107038637
 GameObject:
   m_ObjectHideFlags: 0
