@@ -6,7 +6,7 @@ public class gameManager : MonoBehaviour
 {
     public TextAsset[] entries;
 
-    public bool journal = true;
+    public bool journal = false;
     public int currPage = 0;
     public List<bool> unlocked = new List<bool>();
 

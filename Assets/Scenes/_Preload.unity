@@ -154,7 +154,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 0181468e3793a3e41931b62aca89e574, type: 3}
   - {fileID: 4900000, guid: 1ef71391a704dea43b5f2752d4b779c4, type: 3}
   - {fileID: 4900000, guid: 5778e2037f5d2eb48933fcb40489db67, type: 3}
-  journal: 1
+  journal: 0
   currPage: 0
   unlocked: 
 --- !u!114 &114552447
