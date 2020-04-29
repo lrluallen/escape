@@ -9,8 +9,6 @@ public class ItemCollect : MonoBehaviour
     public string Identity;
     // Item image
     public Sprite icon;
-    // How many collected
-    public int count = 1;
 
     private void OnTriggerEnter(Collider other)
     {

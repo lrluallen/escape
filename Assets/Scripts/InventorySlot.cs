@@ -11,6 +11,8 @@ public class InventorySlot : MonoBehaviour
 
     ItemCollect item;
 
+    int count = 0;
+
     public void AddItem(ItemCollect newItem)
     {
         item = newItem;
@@ -18,7 +20,8 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = item.icon;
         icon.enabled = true;
         // How many are in inventory
-        itemCount.text = item.count.ToString();
+        count += 1;
+        itemCount.text = count.ToString();
         itemCount.enabled = true;
     }
 
@@ -45,8 +48,8 @@ public class InventorySlot : MonoBehaviour
     // Update count
     public void ChangeCount(int quant)
     {
-        item.count += quant;
-        itemCount.text = item.count.ToString();
+        count += quant;
+        itemCount.text = count.ToString();
     }
 
 }
