@@ -11086,7 +11086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSeconds: 0
-  startingSeconds: 125
+  startingSeconds: 300
   countdownText: {fileID: 1763064457}
 --- !u!1 &1394232984
 GameObject:

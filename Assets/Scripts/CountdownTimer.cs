@@ -8,9 +8,14 @@ public class CountdownTimer : MonoBehaviour
     public float currentSeconds = 0f;
     public float startingSeconds = 300f;
     public Text countdownText;
+
+    // manager script
+    gameManager gmScr;
+
     // Start is called before the first frame update
     void Start()
     {
+        gmScr = gameObject.GetComponent<ItemHandler>().GetManager();
         currentSeconds = startingSeconds;
 
     }
@@ -22,6 +27,7 @@ public class CountdownTimer : MonoBehaviour
         {
             currentSeconds = 0f;
             countdownText.text = currentSeconds.ToString("0") + "\nYOU'VE MET WITH A TERRIBLE FATE\nHAVEN'T YOU?";
+            gmScr.EndGame();
         }
 
         else if (currentSeconds > 0f && currentSeconds < 10f) //don't let it drop to below 10 seconds without a padding zero

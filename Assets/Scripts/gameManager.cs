@@ -24,8 +24,6 @@ public class gameManager : MonoBehaviour
 
     // Inventory
     public InventorySlot[] slots;
-
-    public bool gameHasEnded = false; 
     
     private void Awake()
     {
@@ -36,18 +34,10 @@ public class gameManager : MonoBehaviour
 
     public void EndGame()
     {
-        if(gameHasEnded == false)
-        {
-            /*
-            if (timer.currentSeconds < 0f)
-            {
-                // Load the Ending Screen
-            }
-            */
-            gameHasEnded = true;
-            Debug.Log("Game Over");
-            Restart();
-        }
+        Debug.Log("Game Over");
+        // Load endscreen
+        // Probably add a wait
+        Restart();
 
     }
 
