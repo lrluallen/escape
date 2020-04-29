@@ -1,5 +1,8 @@
 # Fly the Coop
 ## Contributors: Brandon Bower, Lindsay Luallen
 ### Credits: 
-####https://www.youtube.com/watch?v=_QajrabyTJc&t=175s, 
-####https://www.alamy.com/close-up-of-red-mushroom-growing-on-field-image265690259.html, 
+#### CODE:
+* https://www.youtube.com/watch?v=o0j7PdU88a4
+* https://www.youtube.com/watch?v=_QajrabyTJc
+#### MATERIAL PICTURES: 
+* https://www.alamy.com/close-up-of-red-mushroom-growing-on-field-image265690259.html 
