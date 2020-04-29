@@ -7,6 +7,8 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
 
+    public Button removeButton;
+
     public Text itemCount;
 
     ItemCollect item;
@@ -23,6 +25,8 @@ public class InventorySlot : MonoBehaviour
         count += 1;
         itemCount.text = count.ToString();
         itemCount.enabled = true;
+
+        removeButton.interactable = true;
     }
 
     // Remove item(s) and reset slot
@@ -30,7 +34,25 @@ public class InventorySlot : MonoBehaviour
     {
         icon.sprite = null;
         icon.enabled = false;
+        count = 0;
         itemCount.enabled = false;
+        removeButton.interactable = false;
+    }
+
+    public void OnRemoveButton()
+    {
+        ClearSlot();
+    }
+
+    public void UseItem()
+    {
+        if(count > 0)
+        {
+            ChangeCount(-1);
+            // TODO implement item using
+            if (count == 0)
+                ClearSlot();
+        }
     }
 
     // Check if slot is empty
