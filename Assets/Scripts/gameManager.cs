@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
+    public CountdownTimer timer; 
     // Journal entry text
     public TextAsset[] entries;
     
@@ -21,12 +24,38 @@ public class gameManager : MonoBehaviour
 
     // Inventory
     public InventorySlot[] slots;
+
+    public bool gameHasEnded = false; 
     
-        private void Awake()
+    private void Awake()
     {
         // First entry is always unlocked, the rest start locked
         unlocked.Add(0);
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
+
+    public void EndGame()
+    {
+        if(gameHasEnded == false)
+        {
+            /*
+            if (timer.currentSeconds < 0f)
+            {
+                // Load the Ending Screen
+            }
+            */
+            gameHasEnded = true;
+            Debug.Log("Game Over");
+            Restart();
+        }
+
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+
 
 }
