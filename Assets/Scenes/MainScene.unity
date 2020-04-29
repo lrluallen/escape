@@ -10980,6 +10980,7 @@ GameObject:
   - component: {fileID: 1392276309}
   - component: {fileID: 1392276310}
   - component: {fileID: 1392276311}
+  - component: {fileID: 1392276312}
   m_Layer: 0
   m_Name: FirstPersonController
   m_TagString: Player
@@ -11072,6 +11073,21 @@ MonoBehaviour:
   J_Text: {fileID: 972261987}
   nextB: {fileID: 1396258807}
   prevB: {fileID: 79374877}
+--- !u!114 &1392276312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392276306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26b71b1d3590a6499bf2ab3da24f3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSeconds: 0
+  startingSeconds: 125
+  countdownText: {fileID: 1763064457}
 --- !u!1 &1394232984
 GameObject:
   m_ObjectHideFlags: 0
@@ -11084,7 +11100,6 @@ GameObject:
   - component: {fileID: 1394232987}
   - component: {fileID: 1394232986}
   - component: {fileID: 1394232985}
-  - component: {fileID: 1394232989}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -11177,21 +11192,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1394232989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394232984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a26b71b1d3590a6499bf2ab3da24f3e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentSeconds: 0
-  startingSeconds: 300
-  countdownText: {fileID: 1763064457}
 --- !u!1 &1396258807
 GameObject:
   m_ObjectHideFlags: 0

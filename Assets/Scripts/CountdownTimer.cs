@@ -18,26 +18,30 @@ public class CountdownTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentSeconds < 0f) //don't let it drop negative
+        if (currentSeconds <= 0f) //don't let it drop negative
         {
             currentSeconds = 0f;
-            countdownText.text = currentSeconds.ToString("0") + "\nYOU HAVE FIVE MINUTES!";
+            countdownText.text = currentSeconds.ToString("0") + "\nYOU'VE MET WITH A TERRIBLE FATE\nHAVEN'T YOU?";
         }
 
-        if (currentSeconds < 10f) //don't let it drop to below 10 seconds eithout a padding zero
+        else if (currentSeconds > 0f && currentSeconds < 10f) //don't let it drop to below 10 seconds without a padding zero
         {
             currentSeconds -= 1f * Time.deltaTime;
-            countdownText.text = "0" + currentSeconds.ToString();
+            countdownText.text = "0" + currentSeconds.ToString() + "\nYOU BETTER RUNNNNN!";
         }
 
         else
         {
             // else, just calcualte the current seconds 
             currentSeconds -= 1f * Time.deltaTime;
-            countdownText.text = currentSeconds.ToString("0") + "\nYOU HAVE FIVE MINUTES!";
+            // How many minutes left, +1 since <1 == 1 minute left generally 
+            int mLeft = ((int) currentSeconds / 60) + 1;
+            string Mins;
+            // Check if Minute should be plural or not
+            Mins = mLeft <= 1 ? " MINUTE LEFT!" : " MINUTES LEFT!"; //
+            countdownText.text = currentSeconds.ToString("0") + "\nYOU HAVE " + mLeft.ToString() + Mins;
             
         }
-        countdownText.text = currentSeconds.ToString("0") + "\nYOU HAVE FIVE MINUTES!";
 
     }
 }
