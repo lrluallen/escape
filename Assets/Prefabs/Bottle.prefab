@@ -106,4 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04dfc2142eea4d740a9b1142c85d0e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Identity: '"Bottle"'
+  Identity: Bottle
+  icon: {fileID: 21300000, guid: c9a83abe899c22c42a0ed7441d07585a, type: 3}
