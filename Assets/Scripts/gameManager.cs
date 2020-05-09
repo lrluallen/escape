@@ -24,7 +24,13 @@ public class gameManager : MonoBehaviour
 
     // Inventory
     public InventorySlot[] slots;
-    
+
+    // Checks if player is in build area
+    public bool isin = false;
+
+    // Build area player is in
+    public Build builder; 
+
     private void Awake()
     {
         // First entry is always unlocked, the rest start locked

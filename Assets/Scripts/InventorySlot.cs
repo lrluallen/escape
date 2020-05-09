@@ -49,7 +49,8 @@ public class InventorySlot : MonoBehaviour
         if(count > 0)
         {
             ChangeCount(-1);
-            // TODO implement item using
+            // UseItem
+            item.UseItem();
             if (count == 0)
                 ClearSlot();
         }

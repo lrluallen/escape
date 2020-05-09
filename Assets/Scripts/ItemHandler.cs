@@ -14,6 +14,7 @@ public class ItemHandler : MonoBehaviour
     // journal open/close button
     public GameObject J_OpenClose;
 
+    // Parent of all slots
     public Transform itemsParent;
 
     // Start is called before the first frame update
