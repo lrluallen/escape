@@ -12,7 +12,7 @@ public class EntryUnlock : MonoBehaviour
     {
         if (other.tag == "Player" && locked)
         {
-            gameManager gmScr = other.GetComponent<ItemHandler>().GetManager();
+            GameManager gmScr = other.GetComponent<ItemHandler>().GetManager();
             if (gmScr.journal)
             {
                 // Can only unlock entry once

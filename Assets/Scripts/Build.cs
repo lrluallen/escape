@@ -7,7 +7,7 @@ public class Build : MonoBehaviour
     public List<ItemCollect> recipe;
     public GameObject prefab;
 
-    gameManager gmScr;
+    GameManager gmScr;
 
     private void OnTriggerEnter(Collider other)
     {

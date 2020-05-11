@@ -9,7 +9,7 @@ public class ItemHandler : MonoBehaviour
     GameObject initObj;
     
     // manager script
-    public gameManager gmScr;
+    public GameManager gmScr;
     
     // journal open/close button
     public GameObject J_OpenClose;
@@ -21,7 +21,7 @@ public class ItemHandler : MonoBehaviour
     void Start()
     {
         initObj = GameObject.FindGameObjectWithTag("Init");
-        gmScr = initObj.GetComponent<gameManager>();
+        gmScr = initObj.GetComponent<GameManager>();
         // set state of button
         J_OpenClose.SetActive(gmScr.journal);
 
@@ -30,7 +30,7 @@ public class ItemHandler : MonoBehaviour
     }
 
     // Function so other scripts can easily get at the game manager script
-    public gameManager GetManager()
+    public GameManager GetManager()
     {
         return gmScr;
     }

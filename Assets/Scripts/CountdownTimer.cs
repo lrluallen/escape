@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
     public float currentSeconds = 0f;
-    public float startingSeconds = 90f;
+    public float startingSeconds = 60f;
     public Text countdownText;
     public int mLeft;
     string Mins;
 
     // manager script
-    gameManager gmScr;
+    GameManager gmScr;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,8 @@ public class CountdownTimer : MonoBehaviour
         if (currentSeconds <= 0f) //don't let it drop negative
         {
             currentSeconds = 0f; //don't let it drop negative
+            // Want to end game here
+            FindObjectOfType<GameManager>().EndGame();
             gmScr.EndGame(); // WILL DISPLAY ENDING SCENE AND RESTART LEVEL
         }
 

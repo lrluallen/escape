@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ItemCollect : MonoBehaviour
 {
     // Manager Script
-    gameManager gmscr;
+    GameManager gmscr;
     // Item name
     public string Identity;
     // Item image

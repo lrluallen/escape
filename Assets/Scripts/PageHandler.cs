@@ -10,7 +10,7 @@ public class PageHandler : MonoBehaviour
     public GameObject nextB;
     public GameObject prevB;
 
-    gameManager gmScr;
+    GameManager gmScr;
     int index;
     int page;
 

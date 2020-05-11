@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class gameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public CountdownTimer timer; 
     // Journal entry text
@@ -41,15 +41,14 @@ public class gameManager : MonoBehaviour
     public void EndGame()
     {
         Debug.Log("Game Over");
-        // Load endscreen
-        // Probably add a wait
-        // LINDSAY TO DO INSERT ENDING SCENE HERE
+        // Display End Scene here
         Restart();
 
     }
 
     public void Restart()
     {
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
