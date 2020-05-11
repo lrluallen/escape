@@ -43,7 +43,7 @@ public class gameManager : MonoBehaviour
         Debug.Log("Game Over");
         // Load endscreen
         // Probably add a wait
-        // INsert ending scene here!
+        // LINDSAY TO DO INSERT ENDING SCENE HERE
         Restart();
 
     }
