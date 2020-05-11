@@ -9,7 +9,7 @@ public class ItemHandler : MonoBehaviour
     GameObject initObj;
     
     // manager script
-    gameManager gmScr;
+    public gameManager gmScr;
     
     // journal open/close button
     public GameObject J_OpenClose;

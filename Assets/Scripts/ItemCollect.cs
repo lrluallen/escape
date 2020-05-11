@@ -31,7 +31,7 @@ public class ItemCollect : MonoBehaviour
         // Check if player is in build area
         if (gmscr.isin)
         {
-            print("Using item: " + Identity);
+            Debug.Log("Using item: " + Identity);
             gmscr.builder.removeItem(this);
         }
     }

@@ -39,11 +39,11 @@ public class Build : MonoBehaviour
     {
         for (int i = 0; i < recipe.Count; ++i)
         {
-            print("Looking at: " + recipe[i]);
+            Debug.Log("Looking at: " + recipe[i]);
             if (recipe[i].Identity == item.Identity)
             {
                 recipe.Remove(recipe[i]);
-                print("Removed: " + item.Identity);
+                Debug.Log("Removed: " + item.Identity);
                 break;
             }
         }
