@@ -5,7 +5,7 @@ using UnityEngine;
 public class Build : MonoBehaviour
 {
     public List<ItemCollect> recipe;
-    public GameObject prefab;
+    public GameObject[] targets;
 
     GameManager gmScr;
 
@@ -21,7 +21,8 @@ public class Build : MonoBehaviour
 
     private void Start()
     {
-        prefab.SetActive(false);
+        for(int i = 0; i < targets.Length; ++i)
+            targets[i].SetActive(false);
     }
 
     private void OnTriggerExit(Collider other)
@@ -54,6 +55,7 @@ public class Build : MonoBehaviour
     // Recipe has been fulfilled, so 'build' object
     void buildPrefab()
     {
-        prefab.SetActive(true);
+        for (int i = 0; i < targets.Length; ++i)
+            targets[i].SetActive(true);
     }
 }

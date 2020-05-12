@@ -12541,8 +12541,8 @@ Transform:
   - {fileID: 1141922451}
   - {fileID: 1145008174}
   - {fileID: 28785735}
-  - {fileID: 1320904364}
   - {fileID: 2056847564}
+  - {fileID: 1320904364}
   - {fileID: 1329817229}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -18240,6 +18240,12 @@ Transform:
   m_Father: {fileID: 1445178918}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &888635583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9138832890459741083, guid: c040da30411070641bd9494481386734,
+    type: 3}
+  m_PrefabInstance: {fileID: 9138832890062846710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &903828720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24498,7 +24504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1155427376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24513,7 +24519,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipe:
   - {fileID: 8296172667361257292}
-  prefab: {fileID: 9138832890459741083, guid: c040da30411070641bd9494481386734, type: 3}
+  targets:
+  - {fileID: 888635583}
+  - {fileID: 28785734}
+  - {fileID: 1329817228}
 --- !u!65 &1155427377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24729,7 +24738,7 @@ PrefabInstance:
     - target: {fileID: 9089213137008646110, guid: 28735cf1166b61a449345ef6604d86e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 9089213137008646110, guid: 28735cf1166b61a449345ef6604d86e0,
         type: 3}
@@ -31919,7 +31928,8 @@ MonoBehaviour:
   - {fileID: 1145008176}
   - {fileID: 1320904366}
   - {fileID: 7576511063950744247}
-  prefab: {fileID: 1753998025}
+  targets:
+  - {fileID: 1753998025}
 --- !u!65 &1724837990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38129,7 +38139,7 @@ Transform:
   - {fileID: 267924296}
   - {fileID: 263341819}
   m_Father: {fileID: 632472110}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
 --- !u!135 &2056847565
 SphereCollider:
