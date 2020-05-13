@@ -7,13 +7,13 @@ public class MouseLook : MonoBehaviour
     float mouseSensitivity = 100f;
     public Transform playerBody;
     float xRotation = 0f;
-    bool state;
+    bool moveState;
     bool press;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        state = true;
+        moveState = true;
         press = true;
         
     }
@@ -21,26 +21,29 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Mouse controls camera
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        if (moveState)
+        {
+            // Mouse controls camera
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseX);
+        }
 
         // Check for input to activate/deactivate mouse
         if (Input.GetKeyDown(KeyCode.Tab) && press)
         {
             // activate mouse
-            if (state)
+            if (moveState)
                 Cursor.lockState = CursorLockMode.None;
             // deactivate mouse
             else
                 Cursor.lockState = CursorLockMode.Locked;
             // toggle for correct result text time
-            state = !state;
+            moveState = !moveState;
             // holding key does nothing
             press = false;
         }
