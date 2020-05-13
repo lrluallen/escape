@@ -19,16 +19,18 @@ public class ShowBottleMonologue : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             //monologueObject.SetActive(true);
-            StartCoroutine("WaitForSec");
+            //StartCoroutine("WaitForSec");
             monologueObject.SetActive(false);
+            Destroy(monologueObject);
+            Destroy(gameObject);
         }
     }
 
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(5);
-        Destroy(monologueObject);
-        Destroy(gameObject);
+        
+        
 
     }
 }
