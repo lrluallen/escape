@@ -12,12 +12,14 @@ public class GameManager : MonoBehaviour
     
     // Is journal unlocked
     public bool journal = false;
+    bool jState;
     
     // Current index of unlocked for page being read
     public int currIndex = 0;
     
     // Which entries have been unlocked
     public List<int> unlocked = new List<int>();
+    List<int> uState;
 
     // Inventory cap
     public int inCap = 9;
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour
     public bool isin = false;
 
     // Build area player is in
-    public Build builder; 
+    public Build builder;
 
     private void Awake()
     {
@@ -38,9 +40,25 @@ public class GameManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 
+    // Call at start of each level to update restart point
+    public void UpdateState()
+    {
+        jState = journal;
+        uState = new List<int>(unlocked);
+    }
+
+    // Called at the end of the level to reset progress
+    private void ClearProgress()
+    {
+        journal = jState;
+        unlocked = new List<int>(uState);
+        currIndex = 0;
+    }
+
     public void EndGame()
     {
         Debug.Log("Game Over");
+        ClearProgress();
         // Display End Scene here
         Restart();
 

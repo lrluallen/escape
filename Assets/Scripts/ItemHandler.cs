@@ -22,6 +22,10 @@ public class ItemHandler : MonoBehaviour
     {
         initObj = GameObject.FindGameObjectWithTag("Init");
         gmScr = initObj.GetComponent<GameManager>();
+        
+        // Set states for if level is lost
+        gmScr.UpdateState();
+        
         // set state of button
         J_OpenClose.SetActive(gmScr.journal);
 
