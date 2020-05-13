@@ -31699,7 +31699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSeconds: 0
-  startingSeconds: 5
+  startingSeconds: 300
   countdownText: {fileID: 1763064457}
   mLeft: 0
   endScreenImage: {fileID: 1246681685}

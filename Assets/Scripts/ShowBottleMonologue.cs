@@ -30,7 +30,6 @@ public class ShowBottleMonologue : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         
-        
-
+      
     }
 }
