@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public CanvasGroup flewTheCoopSuccessImage;
+    public float displayImageDuration = 1f;
+
     public CountdownTimer timer; 
     // Journal entry text
     public TextAsset[] entries;
@@ -64,10 +67,17 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /*
+    public void FoundJournal()
+    {
+        
+    }
+    */
+
     public void Restart()
     {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("StartScene"); // Give user option to choose to play again instead of loading them right back into the game
 
     }
 

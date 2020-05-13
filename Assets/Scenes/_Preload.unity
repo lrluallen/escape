@@ -150,13 +150,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1376a2d165a9ded4280eb17866c185b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 0}
   entries:
   - {fileID: 4900000, guid: 0181468e3793a3e41931b62aca89e574, type: 3}
   - {fileID: 4900000, guid: 1ef71391a704dea43b5f2752d4b779c4, type: 3}
   - {fileID: 4900000, guid: 5778e2037f5d2eb48933fcb40489db67, type: 3}
   journal: 0
-  currPage: 0
+  currIndex: 0
   unlocked: 
+  inCap: 9
+  slots: []
+  isin: 0
+  builder: {fileID: 0}
 --- !u!114 &114552447
 MonoBehaviour:
   m_ObjectHideFlags: 0

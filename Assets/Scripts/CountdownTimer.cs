@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CountdownTimer : MonoBehaviour
 {
     public float currentSeconds = 0f;
-    public float startingSeconds = 60f;
+    public float startingSeconds = 300f;
     public Text countdownText;
     public int mLeft;
     string Mins;
@@ -41,6 +41,7 @@ public class CountdownTimer : MonoBehaviour
             countdownText.text = "HURRY! YOU HAVE " + currentSeconds.ToString("0") + " SECONDS LEFT!\n"; //display the 20 second warning first
 
         }
+
 
 
         else // currentSeconds > 20f
