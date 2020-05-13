@@ -14,10 +14,11 @@ public class CountdownTimer : MonoBehaviour
 
     // manager script
     GameManager gmScr;
-
+    public GameObject endScreenImage; 
     // Start is called before the first frame update
     void Start()
     {
+        endScreenImage.SetActive(false);
         gmScr = gameObject.GetComponent<ItemHandler>().GetManager();
         currentSeconds = startingSeconds;
 
@@ -32,6 +33,8 @@ public class CountdownTimer : MonoBehaviour
             currentSeconds = 0f; //don't let it drop negative
             // Want to end game here
             FindObjectOfType<GameManager>().EndGame();
+            endScreenImage.SetActive(true);
+
             gmScr.EndGame(); // WILL DISPLAY ENDING SCENE AND RESTART LEVEL
         }
 
