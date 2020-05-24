@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemHandler : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class ItemHandler : MonoBehaviour
     // Parent of all slots
     public Transform itemsParent;
 
+    public Button iButton;
+    public Button jButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,18 @@ public class ItemHandler : MonoBehaviour
 
         gmScr.slots = itemsParent.GetComponentsInChildren<InventorySlot>();
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            iButton.onClick.Invoke();
+        }
+        else if (gmScr.journal && Input.GetKeyDown(KeyCode.J))
+        {
+            jButton.onClick.Invoke();
+        }
     }
 
     // Function so other scripts can easily get at the game manager script

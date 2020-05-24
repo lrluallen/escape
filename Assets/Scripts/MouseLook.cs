@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
@@ -9,13 +10,13 @@ public class MouseLook : MonoBehaviour
     float xRotation = 0f;
     bool moveState;
     bool press;
+    public Text mode;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         moveState = true;
         press = true;
-        
     }
 
     // Update is called once per frame
@@ -38,10 +39,16 @@ public class MouseLook : MonoBehaviour
         {
             // activate mouse
             if (moveState)
+            {
                 Cursor.lockState = CursorLockMode.None;
-            // deactivate mouse
+                mode.text = "Mode:\nInventory";
+                // deactivate mouse
+            }
             else
+            {
                 Cursor.lockState = CursorLockMode.Locked;
+                mode.text = "Mode:\nLook";
+            }
             // toggle for correct result text time
             moveState = !moveState;
             // holding key does nothing
