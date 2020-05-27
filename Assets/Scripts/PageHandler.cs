@@ -38,7 +38,7 @@ public class PageHandler : MonoBehaviour
         // Incremented page didn't exist
         }
         else
-            index -= dir;
+        index -= dir;
         gmScr.currIndex = index;
         CheckButtons();
     }
