@@ -26411,6 +26411,7 @@ MonoBehaviour:
   - {fileID: 888635583}
   - {fileID: 28785734}
   - {fileID: 1329817228}
+  - {fileID: 57898997}
 --- !u!65 &1155427377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42234,7 +42235,7 @@ PrefabInstance:
     - target: {fileID: 2918015914856812004, guid: a7c5747a24d4732429048f188750f3be,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7c5747a24d4732429048f188750f3be, type: 3}

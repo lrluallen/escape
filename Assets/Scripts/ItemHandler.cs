@@ -18,9 +18,6 @@ public class ItemHandler : MonoBehaviour
     // Parent of all slots
     public Transform itemsParent;
 
-    public Button iButton;
-    public Button jButton;
-
     // Start is called before the first frame update
     void Start()
     {
