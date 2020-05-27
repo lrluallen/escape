@@ -8,6 +8,7 @@ public class CountdownTimer : MonoBehaviour
 {
     public float currentSeconds = 0f;
     public float startingSeconds = 300f;
+    public float maskSeconds = 300f;
     public Text countdownText;
     public int mLeft;
     string Mins;
@@ -78,8 +79,10 @@ public class CountdownTimer : MonoBehaviour
                 SceneManager.LoadScene("StartScene");
 
             }
-
         }
-
+    }
+    public void FoundMask()
+    {
+        currentSeconds = maskSeconds;
     }
 }

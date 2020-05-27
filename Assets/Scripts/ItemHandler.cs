@@ -52,6 +52,10 @@ public class ItemHandler : MonoBehaviour
                 gmScr.journal = true;
                 J_OpenClose.SetActive(true);
                 break;
+            // Scuba Mask
+            case "Goggles":
+                GetComponent<CountdownTimer>().FoundMask();
+                break;
             // All other items at the moment
             default:
                 UpdateUI(item);
