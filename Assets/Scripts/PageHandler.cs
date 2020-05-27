@@ -18,6 +18,7 @@ public class PageHandler : MonoBehaviour
     void Start()
     {
         gmScr = gameObject.GetComponent<ItemHandler>().GetManager();
+        print(gmScr);
         index = gmScr.currIndex;
         page = gmScr.unlocked[index];
         J_Text.text = gmScr.entries[page].text;

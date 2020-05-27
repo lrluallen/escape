@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
-    float mouseSensitivity = 100f;
+    public float mouseSensitivity = 100f;
     public Transform playerBody;
     float xRotation = 0f;
     bool moveState;
     bool press;
     public Text mode;
+        public Button iButton;
+    public Button jButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,24 +35,21 @@ public class MouseLook : MonoBehaviour
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             playerBody.Rotate(Vector3.up * mouseX);
         }
-
         // Check for input to activate/deactivate mouse
-        if (Input.GetKeyDown(KeyCode.Tab) && press)
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            // activate mouse
-            if (moveState)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                mode.text = "Mode:\nInventory";
-                // deactivate mouse
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                mode.text = "Mode:\nLook";
-            }
-            // toggle for correct result text time
-            moveState = !moveState;
+            moveState = ChangeState(moveState);
+            iButton.onClick.Invoke();
+        }
+        else if (Input.GetKeyDown(KeyCode.J) && jButton.isActiveAndEnabled)
+        {
+            moveState = ChangeState(moveState);
+            jButton.onClick.Invoke();
+        }
+    
+        else if (Input.GetKeyDown(KeyCode.Tab) && press)
+        {
+            moveState = ChangeState(moveState);
             // holding key does nothing
             press = false;
         }
@@ -59,5 +58,23 @@ public class MouseLook : MonoBehaviour
         {
             press = true;
         }
+    }
+    bool ChangeState(bool moveState)
+    {
+        // activate mouse
+        if (moveState)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            mode.text = "Mode:\nInventory";
+            // deactivate mouse
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            mode.text = "Mode:\nLook";
+        }
+        // toggle for correct result text time
+        moveState = !moveState;
+        return moveState;
     }
 }
