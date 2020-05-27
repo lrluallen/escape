@@ -579,9 +579,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '* PICKING UP / USING ITEMS *                                                              Collide
-    with items to pick them up. They will show up in your inventory. To use items,
-    stand in the space described in the player monologue, open your inventory, and
-    then click on the item in it''s inventory slot to "use " the items one at a time.'
+    with items to pick them up. You can collide with important items more than once.
+    They will show up in your inventory. To use items, stand in the space described
+    in the player monologue, open your inventory, press TAB to turn your mouse on,
+    and then click on the item in it''s inventory slot to "use " the items one at
+    a time.'
 --- !u!222 &792094297
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -796,7 +798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -140}
+  m_AnchoredPosition: {x: 0, y: -160}
   m_SizeDelta: {x: 700, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583400245
@@ -834,7 +836,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '* INVENTORY / JOURNAL *
 
-    Use mouse to look around, and use "tab" to turn this feature on / off
+    Use mouse to move the camera and click on items in your inventory, and use TAB
+    to switch between these two modes
 
     Use WASD or Arrow keys to move.
 
@@ -985,7 +988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -320}
+  m_AnchoredPosition: {x: 0, y: -340}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673974481
