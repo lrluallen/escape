@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public float fadeDuration = 1f;
     public CanvasGroup flewTheCoopSuccessImage;
     public float displayImageDuration = 1f;
+    float timerThing;
 
     public CountdownTimer timer; 
     // Journal entry text
@@ -62,8 +64,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over");
         ClearProgress();
-        // Display End Scene here
+        // End Game Image Displayed in GameEnd script!
         Restart();
+        
 
     }
 

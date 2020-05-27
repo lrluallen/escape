@@ -31,7 +31,7 @@ public class CampWonMonologue : MonoBehaviour
 
     void OnTriggerExit(Collider player)
     {
-        SceneManager.LoadScene("CaveScene");
+        SceneManager.LoadScene("OceanScene");
     }
 }
 

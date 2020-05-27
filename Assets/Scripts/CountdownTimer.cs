@@ -12,13 +12,17 @@ public class CountdownTimer : MonoBehaviour
     public int mLeft;
     string Mins;
 
+    public float timer;
+    public float fadeDuration = 1f;
+    public float displayImageDuration = 1f; 
+
     // manager script
     GameManager gmScr;
-    public GameObject endScreenImage; 
+    public CanvasGroup endScreenImageCanvasGroup; 
     // Start is called before the first frame update
     void Start()
     {
-        endScreenImage.SetActive(false);
+        endScreenImageCanvasGroup.alpha = 0; // Don't show fail screen right away
         gmScr = gameObject.GetComponent<ItemHandler>().GetManager();
         currentSeconds = startingSeconds;
 
@@ -32,10 +36,11 @@ public class CountdownTimer : MonoBehaviour
         {
             currentSeconds = 0f; //don't let it drop negative
             // Want to end game here
-            FindObjectOfType<GameManager>().EndGame();
-            endScreenImage.SetActive(true);
+            //FindObjectOfType<GameManager>().EndGame();
+            //endScreenImage.SetActive(true);
 
-            gmScr.EndGame(); // WILL DISPLAY ENDING SCENE AND RESTART LEVEL
+            //gmScr.EndGame(); // WILL DISPLAY ENDING SCENE AND RESTART LEVEL
+            EndCampLevel();
         }
 
         else if (currentSeconds <= 20f) // display the warning for 20 seconds
@@ -62,6 +67,17 @@ public class CountdownTimer : MonoBehaviour
             // Check if Minute should be plural or not
             Mins = mLeft <= 1 ? " MINUTE LEFT!" : " MINUTES LEFT!"; // Ohhhh look at the ternary operator...
             countdownText.text = "YOU HAVE " + mLeft.ToString("0") + Mins;
+
+        }
+        void EndCampLevel()
+        {
+            timer += Time.deltaTime;
+            endScreenImageCanvasGroup.alpha = timer / fadeDuration;
+            if (timer > fadeDuration + displayImageDuration)
+            {
+                SceneManager.LoadScene("StartScene");
+
+            }
 
         }
 
