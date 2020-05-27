@@ -11,13 +11,16 @@ public class ItemCollect : MonoBehaviour
     public string Identity;
     // Item image
     public Sprite icon;
+    // Don't Disable item when picked up?
+    public bool disableOnCollect = true;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             // Pick up object
-            gameObject.SetActive(false);
+            if(disableOnCollect)
+                gameObject.SetActive(false);
             // Get gameManager script from player
             gmscr = other.GetComponent<ItemHandler>().GetManager();
             // Process the item
