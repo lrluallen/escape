@@ -37,21 +37,11 @@ public class ItemHandler : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            iButton.onClick.Invoke();
-        }
-        else if (gmScr.journal && Input.GetKeyDown(KeyCode.J))
-        {
-            jButton.onClick.Invoke();
-        }
-    }
-
     // Function so other scripts can easily get at the game manager script
     public GameManager GetManager()
     {
+        if (gmScr == null)
+            Start();
         return gmScr;
     }
     
