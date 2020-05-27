@@ -13,6 +13,7 @@
 * https://pngio.com/PNG/a78472-galaxy-black-png.html
 * https://www.reddit.com/r/gaming/comments/6mim1q/screenshot_horizon_zero_dawn_forest_at_night/
 * https://www.freepik.com/premium-photo/dark-brown-soil-texture-background-closeup-macro-shot_4580802.htm
+* https://www.spacetelescope.org/images/
 #### SOUNDS:
 * https://www.youtube.com/watch?v=lQPdYRh3CME&t=66s (Fire for Camp Level)
 * https://www.youtube.com/watch?v=PjjojjUn0bk&t=2s (Night Sounds for Camp Level)

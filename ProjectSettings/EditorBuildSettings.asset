@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 0b6b01057c6283c4bb6eba79602cd680
   - enabled: 1
+    path: Assets/Scenes/DemoScene.unity
+    guid: af2587ab60250614f864cf9b9d06cd6a
+  - enabled: 1
     path: Assets/Scenes/CampScene.unity
     guid: 284a4b14b118e2f4185cca9537c74547
   - enabled: 1
