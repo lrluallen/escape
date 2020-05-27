@@ -11626,7 +11626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e14e90eab772d4098d951532a3f24d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 60
   playerBody: {fileID: 132819003}
   mode: {fileID: 784137146}
   iButton: {fileID: 988453252}
