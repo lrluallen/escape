@@ -55,7 +55,8 @@ public class GameManager : MonoBehaviour
     // Called at the end of the level to reset progress
     private void ClearProgress()
     {
-        journal = jState;
+        //journal = jState; (If we change to per level restart)
+        journal = false;
         unlocked = new List<int>(uState);
         currIndex = 0;
     }

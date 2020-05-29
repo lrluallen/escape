@@ -41,7 +41,7 @@ public class CountdownTimer : MonoBehaviour
             //endScreenImage.SetActive(true);
 
             //gmScr.EndGame(); // WILL DISPLAY ENDING SCENE AND RESTART LEVEL
-            EndCampLevel();
+            EndLevel();
         }
 
         else if (currentSeconds <= 20f) // display the warning for 20 seconds
@@ -70,13 +70,14 @@ public class CountdownTimer : MonoBehaviour
             countdownText.text = "YOU HAVE " + mLeft.ToString("0") + Mins;
 
         }
-        void EndCampLevel()
+        void EndLevel()
         {
             timer += Time.deltaTime;
             endScreenImageCanvasGroup.alpha = timer / fadeDuration;
             if (timer > fadeDuration + displayImageDuration)
             {
-                SceneManager.LoadScene("StartScene");
+
+                gmScr.EndGame();
 
             }
         }
