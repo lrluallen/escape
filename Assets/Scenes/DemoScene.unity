@@ -254,6 +254,38 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 346078093}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &70457399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70457400}
+  m_Layer: 0
+  m_Name: Green
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &70457400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70457399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.72, y: 0.12, z: 18.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 731578151}
+  - {fileID: 809352812}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73107835
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +297,6 @@ GameObject:
   - component: {fileID: 73107836}
   - component: {fileID: 73107839}
   - component: {fileID: 73107838}
-  - component: {fileID: 73107837}
   m_Layer: 8
   m_Name: FlyAgaric (3)
   m_TagString: Untagged
@@ -287,19 +318,6 @@ Transform:
   m_Father: {fileID: 1377760554}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &73107837
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73107835}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &73107838
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -706,7 +724,6 @@ GameObject:
   - component: {fileID: 142228610}
   - component: {fileID: 142228613}
   - component: {fileID: 142228612}
-  - component: {fileID: 142228611}
   m_Layer: 8
   m_Name: FlyAgaric (1)
   m_TagString: Untagged
@@ -728,19 +745,6 @@ Transform:
   m_Father: {fileID: 1377760554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &142228611
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142228609}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &142228612
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -797,8 +801,8 @@ GameObject:
   - component: {fileID: 249092962}
   - component: {fileID: 249092961}
   - component: {fileID: 249092960}
-  - component: {fileID: 249092959}
   - component: {fileID: 249092958}
+  - component: {fileID: 249092959}
   m_Layer: 8
   m_Name: FlyAgaric
   m_TagString: Untagged
@@ -821,8 +825,8 @@ MonoBehaviour:
   Identity: FlyAgaric
   icon: {fileID: 21300000, guid: 177d43f0ba812ad499816f81274a1d37, type: 3}
   disableOnCollect: 0
---- !u!65 &249092959
-BoxCollider:
+--- !u!135 &249092959
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -832,8 +836,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 6, z: 6}
-  m_Center: {x: -0.0000076293945, y: 0, z: 1}
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &249092960
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -887,14 +891,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249092957}
   m_LocalRotation: {x: -0, y: -0, z: 0.8981563, w: 0.43967643}
-  m_LocalPosition: {x: -10.599999, y: 0.24992366, z: -18.05001}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25000012, y: 0.25000012, z: 0.25}
   m_Children:
   - {fileID: 368097681}
   - {fileID: 2084853648}
   - {fileID: 279041757}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1148750362}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
 --- !u!1 &279041756
 GameObject:
@@ -907,7 +911,6 @@ GameObject:
   - component: {fileID: 279041757}
   - component: {fileID: 279041760}
   - component: {fileID: 279041759}
-  - component: {fileID: 279041758}
   m_Layer: 8
   m_Name: FlyAgaric (3)
   m_TagString: Untagged
@@ -929,19 +932,6 @@ Transform:
   m_Father: {fileID: 249092962}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &279041758
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279041756}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &279041759
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1288,7 +1278,6 @@ GameObject:
   - component: {fileID: 368097681}
   - component: {fileID: 368097684}
   - component: {fileID: 368097683}
-  - component: {fileID: 368097682}
   m_Layer: 8
   m_Name: FlyAgaric (1)
   m_TagString: Untagged
@@ -1310,19 +1299,6 @@ Transform:
   m_Father: {fileID: 249092962}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &368097682
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368097680}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &368097683
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1458,7 +1434,6 @@ GameObject:
   - component: {fileID: 435052793}
   - component: {fileID: 435052796}
   - component: {fileID: 435052795}
-  - component: {fileID: 435052794}
   m_Layer: 8
   m_Name: FlyAgaric (2)
   m_TagString: Untagged
@@ -1480,19 +1455,6 @@ Transform:
   m_Father: {fileID: 901168582}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &435052794
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435052792}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &435052795
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1640,7 +1602,6 @@ GameObject:
   - component: {fileID: 453579224}
   - component: {fileID: 453579227}
   - component: {fileID: 453579226}
-  - component: {fileID: 453579225}
   m_Layer: 8
   m_Name: FlyAgaric (1)
   m_TagString: Untagged
@@ -1662,19 +1623,6 @@ Transform:
   m_Father: {fileID: 901168582}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &453579225
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453579223}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &453579226
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1879,6 +1827,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513768246}
   m_CullTransparentMesh: 0
+--- !u!1 &659372520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659372521}
+  m_Layer: 0
+  m_Name: End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &659372521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659372520}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1726515184}
+  - {fileID: 1971483250}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &665186560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2226,8 +2206,9 @@ GameObject:
   - component: {fileID: 731578151}
   - component: {fileID: 731578150}
   - component: {fileID: 731578149}
-  - component: {fileID: 731578148}
   - component: {fileID: 731578146}
+  - component: {fileID: 731578148}
+  - component: {fileID: 731578147}
   m_Layer: 0
   m_Name: ActivateGreen
   m_TagString: Untagged
@@ -2252,8 +2233,8 @@ MonoBehaviour:
   text: 'Almost done! We''re going to practice jumping, just in case you need to use
     it later. Use the space bar to jump over those barriers. Pick up the orange shrooms.
     Then you can build you shroom portal and move onto the next level. '
---- !u!65 &731578148
-BoxCollider:
+--- !u!135 &731578147
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2263,8 +2244,25 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &731578148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731578145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65a1a6a558f1a045972c5dfd68798a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1449132280}
+  - {fileID: 731578145}
+  onEnter: 1
+  onExit: 0
 --- !u!23 &731578149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2318,11 +2316,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731578145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.04, y: 3, z: 14.69}
-  m_LocalScale: {x: 15, y: 5, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 70457400}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &778985698
 GameObject:
@@ -2337,7 +2335,7 @@ GameObject:
   - component: {fileID: 778985700}
   - component: {fileID: 778985699}
   m_Layer: 0
-  m_Name: Barrier (1)
+  m_Name: Barrier 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2413,7 +2411,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.5, z: 14}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &795799686
 PrefabInstance:
@@ -2575,8 +2573,8 @@ GameObject:
   - component: {fileID: 809352812}
   - component: {fileID: 809352811}
   - component: {fileID: 809352810}
-  - component: {fileID: 809352809}
   - component: {fileID: 809352808}
+  - component: {fileID: 809352809}
   m_Layer: 8
   m_Name: Greenies
   m_TagString: Untagged
@@ -2599,8 +2597,8 @@ MonoBehaviour:
   Identity: Greenies
   icon: {fileID: 21300000, guid: 98695fa34529a2941b953d2768ac8461, type: 3}
   disableOnCollect: 0
---- !u!65 &809352809
-BoxCollider:
+--- !u!135 &809352809
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2610,8 +2608,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 6, z: 6}
-  m_Center: {x: -0.0000076293945, y: 0, z: 0}
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &809352810
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2665,14 +2663,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809352807}
   m_LocalRotation: {x: -0, y: -0, z: 0.8981563, w: 0.43967643}
-  m_LocalPosition: {x: 16.36, y: 0.12, z: 14.72}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25000012, y: 0.25000012, z: 0.25}
   m_Children:
   - {fileID: 904937131}
   - {fileID: 1862373201}
   - {fileID: 1253878328}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 70457400}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
 --- !u!1 &890547160
 GameObject:
@@ -2817,8 +2815,8 @@ GameObject:
   - component: {fileID: 901168582}
   - component: {fileID: 901168581}
   - component: {fileID: 901168580}
-  - component: {fileID: 901168579}
   - component: {fileID: 901168578}
+  - component: {fileID: 901168579}
   m_Layer: 8
   m_Name: BlueGray
   m_TagString: Untagged
@@ -2841,8 +2839,8 @@ MonoBehaviour:
   Identity: BlueGray
   icon: {fileID: 21300000, guid: f602753cecf73844192067b0e97c1fd0, type: 3}
   disableOnCollect: 0
---- !u!65 &901168579
-BoxCollider:
+--- !u!135 &901168579
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2852,8 +2850,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 6, z: 6}
-  m_Center: {x: -0.0000076293945, y: 0, z: 0}
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &901168580
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2907,14 +2905,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901168577}
   m_LocalRotation: {x: -0, y: -0, z: 0.8981563, w: 0.43967643}
-  m_LocalPosition: {x: 16.36, y: 0.24992366, z: -18.05001}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25000012, y: 0.25000012, z: 0.25}
   m_Children:
   - {fileID: 453579224}
   - {fileID: 435052793}
   - {fileID: 1411223798}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1837876455}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
 --- !u!1 &904937130
 GameObject:
@@ -2927,7 +2925,6 @@ GameObject:
   - component: {fileID: 904937131}
   - component: {fileID: 904937134}
   - component: {fileID: 904937133}
-  - component: {fileID: 904937132}
   m_Layer: 8
   m_Name: FlyAgaric (1)
   m_TagString: Untagged
@@ -2949,19 +2946,6 @@ Transform:
   m_Father: {fileID: 809352812}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &904937132
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904937130}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &904937133
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3016,15 +3000,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 920555883}
-  - component: {fileID: 920555882}
   - component: {fileID: 920555881}
+  - component: {fileID: 920555882}
   m_Layer: 0
   m_Name: GameEndingBuild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &920555881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3043,10 +3027,9 @@ MonoBehaviour:
   - {fileID: 809352808}
   - {fileID: 1377760550}
   targets:
-  - {fileID: 1971483245}
-  - {fileID: 1726515181}
---- !u!65 &920555882
-BoxCollider:
+  - {fileID: 659372520}
+--- !u!135 &920555882
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3056,7 +3039,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &920555883
 Transform:
@@ -3065,12 +3048,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920555880}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7349988, y: 1.5824404, z: 1.3795261}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.7349988, y: 0, z: 1.3795261}
   m_LocalScale: {x: 30, y: 2, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &940144854
 PrefabInstance:
@@ -3334,8 +3317,9 @@ GameObject:
   - component: {fileID: 953940834}
   - component: {fileID: 953940833}
   - component: {fileID: 953940832}
-  - component: {fileID: 953940831}
   - component: {fileID: 953940835}
+  - component: {fileID: 953940836}
+  - component: {fileID: 953940831}
   m_Layer: 0
   m_Name: DestroyInitialPrompt
   m_TagString: Untagged
@@ -3343,8 +3327,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &953940831
-BoxCollider:
+--- !u!135 &953940831
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3354,7 +3338,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &953940832
 MeshRenderer:
@@ -3409,11 +3393,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953940830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.53, y: 3, z: -13.4}
-  m_LocalScale: {x: 15, y: 5, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1148750362}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &953940835
 MonoBehaviour:
@@ -3435,6 +3419,23 @@ MonoBehaviour:
     and gray shrooms. Don't worry if you forget what you're doing-- every prompt after
     the first one sticks around, so you can always retrace your steps to see these
     hints again!
+--- !u!114 &953940836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953940830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65a1a6a558f1a045972c5dfd68798a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1837876454}
+  - {fileID: 953940830}
+  onEnter: 1
+  onExit: 0
 --- !u!1001 &1012491829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3662,8 +3663,9 @@ GameObject:
   - component: {fileID: 1054198842}
   - component: {fileID: 1054198841}
   - component: {fileID: 1054198840}
-  - component: {fileID: 1054198839}
   - component: {fileID: 1054198837}
+  - component: {fileID: 1054198839}
+  - component: {fileID: 1054198838}
   m_Layer: 0
   m_Name: ActivateOrange
   m_TagString: Untagged
@@ -3689,8 +3691,8 @@ MonoBehaviour:
     To open your inventory you can use "i" or you can hit TAB to be able to click
     on the inventory to open it. To use an item, just click on it. Try going to the
     center of the map and using all of the shrooms you collected!
---- !u!65 &1054198839
-BoxCollider:
+--- !u!135 &1054198838
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3700,8 +3702,25 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1054198839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054198836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65a1a6a558f1a045972c5dfd68798a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 920555880}
+  - {fileID: 1054198836}
+  onEnter: 0
+  onExit: 1
 --- !u!23 &1054198840
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3755,11 +3774,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054198836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.99, y: 3, z: 14.69}
-  m_LocalScale: {x: 15, y: 5, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 1449132281}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1148750361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1148750362}
+  m_Layer: 0
+  m_Name: Red
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1148750362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148750361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.69, y: 0.12, z: -19.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 953940834}
+  - {fileID: 249092962}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1163860517 stripped
 RectTransform:
@@ -3961,7 +4012,6 @@ GameObject:
   - component: {fileID: 1253878328}
   - component: {fileID: 1253878331}
   - component: {fileID: 1253878330}
-  - component: {fileID: 1253878329}
   m_Layer: 8
   m_Name: FlyAgaric (3)
   m_TagString: Untagged
@@ -3983,19 +4033,6 @@ Transform:
   m_Father: {fileID: 809352812}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &1253878329
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253878327}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1253878330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4314,8 +4351,8 @@ GameObject:
   - component: {fileID: 1377760554}
   - component: {fileID: 1377760553}
   - component: {fileID: 1377760552}
-  - component: {fileID: 1377760551}
   - component: {fileID: 1377760550}
+  - component: {fileID: 1377760551}
   m_Layer: 8
   m_Name: Oranges
   m_TagString: Untagged
@@ -4338,8 +4375,8 @@ MonoBehaviour:
   Identity: Oranges
   icon: {fileID: 21300000, guid: 91b8d3f1b98bb6b48a18be73566a4768, type: 3}
   disableOnCollect: 0
---- !u!65 &1377760551
-BoxCollider:
+--- !u!135 &1377760551
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4349,8 +4386,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 6, z: 6}
-  m_Center: {x: -0.0000076293945, y: 0, z: 0}
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1377760552
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4404,14 +4441,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377760549}
   m_LocalRotation: {x: -0, y: -0, z: 0.8981563, w: 0.43967643}
-  m_LocalPosition: {x: -18.85, y: 0.12, z: 14.72}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25000012, y: 0.25000012, z: 0.25}
   m_Children:
   - {fileID: 142228610}
   - {fileID: 2043761984}
   - {fileID: 73107836}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1449132281}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
 --- !u!1001 &1398905978
 PrefabInstance:
@@ -4586,7 +4623,6 @@ GameObject:
   - component: {fileID: 1411223798}
   - component: {fileID: 1411223801}
   - component: {fileID: 1411223800}
-  - component: {fileID: 1411223799}
   m_Layer: 8
   m_Name: FlyAgaric (3)
   m_TagString: Untagged
@@ -4608,19 +4644,6 @@ Transform:
   m_Father: {fileID: 901168582}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &1411223799
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411223797}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1411223800
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4666,6 +4689,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411223797}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1449132280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449132281}
+  m_Layer: 0
+  m_Name: Orange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1449132281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449132280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.6, y: 0.12, z: 17.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1054198842}
+  - {fileID: 1377760554}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1449807721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5476,7 +5531,7 @@ Transform:
   - {fileID: 135304383}
   - {fileID: 1052772898}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1722677619
 GameObject:
@@ -5491,7 +5546,7 @@ GameObject:
   - component: {fileID: 1722677621}
   - component: {fileID: 1722677620}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5567,7 +5622,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.5, z: 14}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726515181
 GameObject:
@@ -5578,15 +5633,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1726515184}
-  - component: {fileID: 1726515183}
   - component: {fileID: 1726515182}
+  - component: {fileID: 1726515183}
   m_Layer: 0
   m_Name: GameEndingMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1726515182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5607,8 +5662,8 @@ MonoBehaviour:
     read the prompts very carefully. You are now free to practice on this level as
     long as the timer is running. To move onto the next level, collide with that big
     aqua sphere. Be ready! It''s timed! '
---- !u!65 &1726515183
-BoxCollider:
+--- !u!135 &1726515183
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5618,7 +5673,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1726515184
 Transform:
@@ -5627,12 +5682,44 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726515181}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7349988, y: 1.5824404, z: -2.68}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.7349988, y: 0, z: -2.68}
   m_LocalScale: {x: 20, y: 10.357, z: 20}
   m_Children: []
+  m_Father: {fileID: 659372521}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1837876454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837876455}
+  m_Layer: 0
+  m_Name: Blue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1837876455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837876454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.77, y: 0.12, z: -19.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2095286487}
+  - {fileID: 901168582}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848247668
 GameObject:
@@ -5719,7 +5806,6 @@ GameObject:
   - component: {fileID: 1862373201}
   - component: {fileID: 1862373204}
   - component: {fileID: 1862373203}
-  - component: {fileID: 1862373202}
   m_Layer: 8
   m_Name: FlyAgaric (2)
   m_TagString: Untagged
@@ -5741,19 +5827,6 @@ Transform:
   m_Father: {fileID: 809352812}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &1862373202
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862373200}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1862373203
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6140,12 +6213,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971483245}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.22, y: 1.2, z: -9.91}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 659372521}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1986699101
 GameObject:
@@ -6330,7 +6403,6 @@ GameObject:
   - component: {fileID: 2043761984}
   - component: {fileID: 2043761987}
   - component: {fileID: 2043761986}
-  - component: {fileID: 2043761985}
   m_Layer: 8
   m_Name: FlyAgaric (2)
   m_TagString: Untagged
@@ -6352,19 +6424,6 @@ Transform:
   m_Father: {fileID: 1377760554}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &2043761985
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043761983}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2043761986
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6512,7 +6571,6 @@ GameObject:
   - component: {fileID: 2084853648}
   - component: {fileID: 2084853651}
   - component: {fileID: 2084853650}
-  - component: {fileID: 2084853649}
   m_Layer: 8
   m_Name: FlyAgaric (2)
   m_TagString: Untagged
@@ -6534,19 +6592,6 @@ Transform:
   m_Father: {fileID: 249092962}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.83401}
---- !u!135 &2084853649
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084853647}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2084853650
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6603,8 +6648,9 @@ GameObject:
   - component: {fileID: 2095286487}
   - component: {fileID: 2095286486}
   - component: {fileID: 2095286485}
-  - component: {fileID: 2095286484}
   - component: {fileID: 2095286482}
+  - component: {fileID: 2095286484}
+  - component: {fileID: 2095286483}
   m_Layer: 0
   m_Name: ActivateBlueGray
   m_TagString: Untagged
@@ -6628,8 +6674,8 @@ MonoBehaviour:
   persists: 1
   text: See? You're doing it! Now, go pick up those green shrooms to make triple sure
     you have the hang of this thing...
---- !u!65 &2095286484
-BoxCollider:
+--- !u!135 &2095286483
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6639,8 +6685,25 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2095286484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095286481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65a1a6a558f1a045972c5dfd68798a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 70457399}
+  - {fileID: 2095286481}
+  onEnter: 0
+  onExit: 1
 --- !u!23 &2095286485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6694,11 +6757,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095286481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.04, y: 3, z: -16.44}
-  m_LocalScale: {x: 15, y: 5, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1837876455}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &2134826272 stripped
 RectTransform:

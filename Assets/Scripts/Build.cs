@@ -21,7 +21,7 @@ public class Build : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < targets.Length; ++i)
+        for (int i = 0; i < targets.Length; ++i)
             targets[i].SetActive(false);
     }
 
