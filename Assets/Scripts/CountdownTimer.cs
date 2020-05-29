@@ -24,6 +24,8 @@ public class CountdownTimer : MonoBehaviour
     void Start()
     {
         endScreenImageCanvasGroup.alpha = 0; // Don't show fail screen right away
+        endScreenImageCanvasGroup.interactable = false;
+        endScreenImageCanvasGroup.blocksRaycasts = false; // Won't block UI buttons
         gmScr = gameObject.GetComponent<ItemHandler>().GetManager();
         currentSeconds = startingSeconds;
 
@@ -70,8 +72,11 @@ public class CountdownTimer : MonoBehaviour
             countdownText.text = "YOU HAVE " + mLeft.ToString("0") + Mins;
 
         }
+
         void EndLevel()
         {
+            endScreenImageCanvasGroup.interactable = true;
+            endScreenImageCanvasGroup.blocksRaycasts = true; // Image can block UI now
             timer += Time.deltaTime;
             endScreenImageCanvasGroup.alpha = timer / fadeDuration;
             if (timer > fadeDuration + displayImageDuration)
@@ -82,6 +87,12 @@ public class CountdownTimer : MonoBehaviour
             }
         }
     }
+
+    public void UpdateScores()
+    {
+        // TODO: Have this function update high(low) scores, and save them in the GameManager script
+    }
+
     public void FoundMask()
     {
         currentSeconds = maskSeconds;

@@ -399,7 +399,7 @@ RectTransform:
   - {fileID: 1604066662}
   - {fileID: 709704953}
   m_Father: {fileID: 1653840786}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -503,7 +503,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653840786}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2029,7 +2029,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653840786}
-  m_RootOrder: 2
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2046,7 +2046,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &669366206
 MonoBehaviour:
@@ -2705,7 +2705,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653840786}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -3943,7 +3943,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653840786}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4096,7 +4096,7 @@ RectTransform:
   - {fileID: 1171646799}
   - {fileID: 944969527}
   m_Father: {fileID: 1653840786}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4921,7 +4921,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653840786}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -5094,7 +5094,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653840786}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5290,14 +5290,14 @@ RectTransform:
   m_Children:
   - {fileID: 2011580410}
   - {fileID: 390854974}
-  - {fileID: 669366204}
-  - {fileID: 1598079690}
   - {fileID: 1199533826}
   - {fileID: 1555170319}
   - {fileID: 1294905161}
   - {fileID: 74096307}
   - {fileID: 112507116}
   - {fileID: 890547161}
+  - {fileID: 1598079690}
+  - {fileID: 669366204}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6066,12 +6066,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1971483245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18ecdc05e6f93e64ea9101b445b2586c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eff3b9f2644bbf468f6dfc4ac6b747f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 1
   player: {fileID: 9495239}
-  caveExitBackgroundImageCanvasGroup: {fileID: 669366205}
+  BackgroundImageCanvasGroup: {fileID: 669366205}
+  sceneToLoad: CampScene
+  finalLevel: 0
   displayImageDuration: 1
 --- !u!135 &1971483247
 SphereCollider:

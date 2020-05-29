@@ -15,6 +15,7 @@ public class GameEndingCave : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("HIt!");
         if (other.gameObject == player)
         {
             isPlayerAtRock = true;
