@@ -19,12 +19,6 @@ public class Build : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        for (int i = 0; i < targets.Length; ++i)
-            targets[i].SetActive(false);
-    }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
@@ -36,7 +30,7 @@ public class Build : MonoBehaviour
     }
 
     // Remove item from recipe
-    public void removeItem(ItemCollect item)
+    public void RemoveItem(ItemCollect item)
     {
         for (int i = 0; i < recipe.Count; ++i)
         {
@@ -49,13 +43,17 @@ public class Build : MonoBehaviour
             }
         }
         if (recipe.Count == 0)
-            buildPrefab();
+            ToggleItems();
     }
 
     // Recipe has been fulfilled, so 'build' object
-    void buildPrefab()
+    void ToggleItems()
     {
         for (int i = 0; i < targets.Length; ++i)
-            targets[i].SetActive(true);
+            targets[i].SetActive(!targets[i].activeSelf);
+        // Turn self off after item is built
+        gmScr.isin = false;
+        gmScr.builder = null;
+        gameObject.SetActive(false);
     }
 }

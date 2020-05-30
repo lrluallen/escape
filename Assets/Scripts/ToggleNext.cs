@@ -5,8 +5,9 @@ using UnityEngine;
 public class ToggleNext : MonoBehaviour
 {
     public GameObject[] targets;
-    public bool onEnter;
-    public bool onExit;
+    // Set when you want toggles to happen
+    public bool onEnter = true;
+    public bool onExit = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,6 +28,7 @@ public class ToggleNext : MonoBehaviour
     void Toggle()
     {
         for (int i = 0; i < targets.Length; ++i)
+            // Toggle active status
             targets[i].SetActive(!targets[i].activeSelf);
     }
 }

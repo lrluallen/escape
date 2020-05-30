@@ -1423,6 +1423,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390854973}
   m_CullTransparentMesh: 0
+--- !u!1 &413730865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 413730868}
+  - component: {fileID: 413730867}
+  - component: {fileID: 413730866}
+  m_Layer: 0
+  m_Name: UsedOrangeMessage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &413730866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413730865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea65efa093df0e2449eb7aea2042ec80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monologueTextField: {fileID: 2011580411}
+  persists: 1
+  text: You hear that sound? That means you used the item incorrectly. Try going near
+    the center of the level and using all of your shrooms (including another orange
+    one) correctly!
+--- !u!135 &413730867
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413730865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.6
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &413730868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413730865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.68, y: 0, z: 16.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435052792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,7 +1919,7 @@ Transform:
   - {fileID: 1726515184}
   - {fileID: 1971483250}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &665186560
 PrefabInstance:
@@ -2230,9 +2292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monologueTextField: {fileID: 2011580411}
   persists: 1
-  text: 'Almost done! We''re going to practice jumping, just in case you need to use
-    it later. Use the space bar to jump over those barriers. Pick up the orange shrooms.
-    Then you can build you shroom portal and move onto the next level. '
+  text: Almost done! We need to get the orange ones next, use space to jump over objects!
 --- !u!135 &731578147
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3028,6 +3088,7 @@ MonoBehaviour:
   - {fileID: 1377760550}
   targets:
   - {fileID: 659372520}
+  - {fileID: 413730865}
 --- !u!135 &920555882
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3053,7 +3114,7 @@ Transform:
   m_LocalScale: {x: 30, y: 2, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &940144854
 PrefabInstance:
@@ -3413,12 +3474,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monologueTextField: {fileID: 2011580411}
   persists: 1
-  text: To pick these up, you need to collide with them. Use the "hand" to guide you
-    while you roll over things to grab them. Try it from different angles if it doesn't
-    show up in your inventory (Press "i") the first time! Let's head over to the blue
-    and gray shrooms. Don't worry if you forget what you're doing-- every prompt after
-    the first one sticks around, so you can always retrace your steps to see these
-    hints again!
+  text: Walk over them to collect! You'll hear a sound if you do it correctly. Now
+    let's go find the blue gray shrooms!
 --- !u!114 &953940836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3687,10 +3744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monologueTextField: {fileID: 2011580411}
   persists: 1
-  text: Alright! Now that you have all the shrooms, time to learn about inventory.
-    To open your inventory you can use "i" or you can hit TAB to be able to click
-    on the inventory to open it. To use an item, just click on it. Try going to the
-    center of the map and using all of the shrooms you collected!
+  text: Alright! Time to learn about inventory! One way to open it is to use 'i',
+    another way is to hit 'TAB' and then click on the backpack. Try opening your inventory
+    and clicking an Orange Shroom to use it!
 --- !u!135 &1054198838
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3717,10 +3773,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets:
-  - {fileID: 920555880}
   - {fileID: 1054198836}
-  onEnter: 0
-  onExit: 1
+  - {fileID: 1190802925}
+  onEnter: 1
+  onExit: 0
 --- !u!23 &1054198840
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3950,6 +4006,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171646798}
   m_CullTransparentMesh: 0
+--- !u!1 &1190802925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1190802928}
+  - component: {fileID: 1190802927}
+  - component: {fileID: 1190802926}
+  m_Layer: 0
+  m_Name: UseOrange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1190802926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190802925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff36dfaf5638a5b40a4d28f21fda7546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipe:
+  - {fileID: 1377760550}
+  targets:
+  - {fileID: 413730865}
+  - {fileID: 920555880}
+--- !u!135 &1190802927
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190802925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.6
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1190802928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190802925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.68, y: 0, z: 16.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199533824
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,7 +4491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Identity: Oranges
-  icon: {fileID: 21300000, guid: 91b8d3f1b98bb6b48a18be73566a4768, type: 3}
+  icon: {fileID: 21300000, guid: c4f63467ab869db438a81c7b226cbb02, type: 3}
   disableOnCollect: 0
 --- !u!135 &1377760551
 SphereCollider:
@@ -5641,7 +5759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1726515182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5655,13 +5773,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monologueTextField: {fileID: 2011580411}
-  persists: 0
-  text: 'Great! Now you know how to move, jump, pick up items, and use or destroy
-    items from your inventory. Remember to use the items within the space described
-    in the prompts. If you use items and nothing happens, re-trace your steps, and
-    read the prompts very carefully. You are now free to practice on this level as
-    long as the timer is running. To move onto the next level, collide with that big
-    aqua sphere. Be ready! It''s timed! '
+  persists: 1
+  text: 'Great! You''ve mastered the basics! When you''re ready to continue, run into
+    that biq aqua sphere! Be ready! It''s timed! '
 --- !u!135 &1726515183
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6672,8 +6786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monologueTextField: {fileID: 2011580411}
   persists: 1
-  text: See? You're doing it! Now, go pick up those green shrooms to make triple sure
-    you have the hang of this thing...
+  text: You're doing it! Now, go pick up those green shrooms to make triple sure you
+    have the hang of this thing...
 --- !u!135 &2095286483
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6702,8 +6816,8 @@ MonoBehaviour:
   targets:
   - {fileID: 70457399}
   - {fileID: 2095286481}
-  onEnter: 0
-  onExit: 1
+  onEnter: 1
+  onExit: 0
 --- !u!23 &2095286485
 MeshRenderer:
   m_ObjectHideFlags: 0

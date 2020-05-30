@@ -35,7 +35,7 @@ public class ItemCollect : MonoBehaviour
         if (gmscr.isin)
         {
             Debug.Log("Using item: " + Identity);
-            gmscr.builder.removeItem(this);
+            gmscr.builder.RemoveItem(this);
         }
     }
 }
