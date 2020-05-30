@@ -162,7 +162,7 @@ MonoBehaviour:
   mLeft: 0
   timer: 0
   fadeDuration: 1
-  displayImageDuration: 1
+  displayImageDuration: 4
   endScreenImageCanvasGroup: {fileID: 1598079691}
 --- !u!114 &9495241
 MonoBehaviour:
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   persists: 1
   text: You hear that sound? That means you used the item incorrectly. Try going near
     the center of the level and using all of your shrooms (including another orange
-    one) correctly!
+    one). You'll hear a different sound if you use the right item in the right place!
 --- !u!135 &413730867
 SphereCollider:
   m_ObjectHideFlags: 0

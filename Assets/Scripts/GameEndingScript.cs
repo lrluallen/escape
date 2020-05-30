@@ -14,7 +14,7 @@ public class GameEndingScript : MonoBehaviour
     public string sceneToLoad; // Scene to be loaded
     public bool finalLevel = false; // If this is the final level (and journal should be reset)
     float timer;
-    public float displayImageDuration = 1f; // How long the image displays
+    public float displayImageDuration = 4f; // How long the image displays
     bool gameEnded = false;
     CountdownTimer timeScr; // For updating high(low) score
     GameManager gmScr; // For resetting journal on final level

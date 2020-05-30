@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2283618141108054503}
   - component: {fileID: 5516210197957825822}
   - component: {fileID: 4957072406293256295}
-  - component: {fileID: 2918015914856812004}
+  - component: {fileID: 5007637580806907854}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -93,17 +93,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Identity: Rock
+  soundSource: {fileID: 0}
+  pickUp: {fileID: 0}
+  useWrong: {fileID: 0}
   icon: {fileID: 21300000, guid: 8540fab88e2fd1648b29a73772561a60, type: 3}
---- !u!65 &2918015914856812004
-BoxCollider:
+  disableOnCollect: 1
+--- !u!135 &5007637580806907854
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6102753521054769602}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.005365703, y: 0.006, z: 0.005365703}
-  m_Center: {x: 3.5953796e-19, y: 0.003, z: 5.7526073e-18}
+  m_Radius: 0.0026828516
+  m_Center: {x: -0.000000007450581, y: 0.0016192152, z: 0}

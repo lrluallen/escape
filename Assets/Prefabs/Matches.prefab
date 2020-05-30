@@ -166,7 +166,8 @@ GameObject:
   - component: {fileID: 7557454198870415424}
   - component: {fileID: 1565702576215401078}
   - component: {fileID: 5082021194848296591}
-  - component: {fileID: 4427444015832827473}
+  - component: {fileID: 8296172667361257292}
+  - component: {fileID: 8599727392695833889}
   m_Layer: 0
   m_Name: Matches
   m_TagString: Untagged
@@ -181,8 +182,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6825804836041288275}
-  m_LocalRotation: {x: 0.000000021855694, y: -4.07094e-17, z: -0.0000000018626449,
-    w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.4709, y: 0.0138, z: 0.83600235}
   m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children:
@@ -238,8 +238,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4427444015832827473
-BoxCollider:
+--- !u!114 &8296172667361257292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6825804836041288275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dfc2142eea4d740a9b1142c85d0e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Identity: Matches
+  soundSource: {fileID: 0}
+  pickUp: {fileID: 8300000, guid: f6738b32cd6fdf145a812b04a06e76a5, type: 3}
+  useWrong: {fileID: 8300000, guid: 6e0867fa755a47d49a8e7fe23b44eff7, type: 3}
+  icon: {fileID: 21300000, guid: fe86ced9a43ca8e449e8a8b178da1552, type: 3}
+  disableOnCollect: 0
+--- !u!135 &8599727392695833889
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -249,5 +267,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0034765333, y: 0.0011004931, z: 0.0017523349}
-  m_Center: {x: -9.313226e-10, y: 0.0005619873, z: -2.910383e-11}
+  m_Radius: 0.004
+  m_Center: {x: 0, y: 0.0005619873, z: 2.0372681e-10}

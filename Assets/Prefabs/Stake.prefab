@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9089213137008646110}
   - component: {fileID: 250048253959728616}
   - component: {fileID: 5783977501893202193}
+  - component: {fileID: 1145008176}
+  - component: {fileID: 1089851520435697786}
   m_Layer: 0
   m_Name: Stake
   m_TagString: Untagged
@@ -25,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5221931361717200333}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,3 +79,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1145008176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5221931361717200333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dfc2142eea4d740a9b1142c85d0e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Identity: Stake
+  soundSource: {fileID: 0}
+  pickUp: {fileID: 8300000, guid: f6738b32cd6fdf145a812b04a06e76a5, type: 3}
+  useWrong: {fileID: 8300000, guid: 6e0867fa755a47d49a8e7fe23b44eff7, type: 3}
+  icon: {fileID: 21300000, guid: 79d0916caf2cef341843bd3e68f55193, type: 3}
+  disableOnCollect: 0
+--- !u!135 &1089851520435697786
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5221931361717200333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0051319683
+  m_Center: {x: -3.7417798e-11, y: 0.005022131, z: 0.000000003259629}
