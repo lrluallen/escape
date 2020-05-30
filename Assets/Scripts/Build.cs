@@ -9,6 +9,9 @@ public class Build : MonoBehaviour
     public AudioClip useRight;
     public List<ItemCollect> recipe;
     public GameObject[] targets;
+    public bool stepBuild = false;
+    int index = 0;
+    public int stepSize = 1;
 
 
     GameManager gmScr;
@@ -50,16 +53,39 @@ public class Build : MonoBehaviour
                 break;
             }
         }
+        if (stepBuild && success)
+        {
+            index = ToggleStep(index);
+        }
+
         if (recipe.Count == 0)
-            ToggleItems();
+        {
+            ToggleItems(index);
+        }
         return success;
     }
 
     // Recipe has been fulfilled, so 'build' object
-    void ToggleItems()
+    void ToggleItems(int index)
     {
-        for (int i = 0; i < targets.Length; ++i)
+        for (int i = index; i < targets.Length; ++i)
             targets[i].SetActive(!targets[i].activeSelf);
+        DisableBuild();
+
+    }
+
+    int ToggleStep(int index)
+    {
+        int length = index + stepSize;
+        for (; index < length; ++index)
+        {
+            targets[index].SetActive(!targets[index].activeSelf);
+        }
+        return index;
+    }
+
+    void DisableBuild()
+    {
         if (buildComplete) // Check if a sound is supplied
             soundSource.PlayOneShot(buildComplete, 1); // Build complete sound
         // Turn self off after item is built
