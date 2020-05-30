@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
+    public AudioSource soundSource;
+    public AudioClip loseSound;
     public float currentSeconds = 0f;
     public float startingSeconds = 300f;
     public float maskSeconds = 300f;
@@ -15,7 +17,9 @@ public class CountdownTimer : MonoBehaviour
 
     public float timer;
     public float fadeDuration = 1f;
-    public float displayImageDuration = 1f; 
+    public float displayImageDuration = 1f;
+
+    bool playSound = true;
 
     // manager script
     GameManager gmScr;
@@ -43,7 +47,7 @@ public class CountdownTimer : MonoBehaviour
             //endScreenImage.SetActive(true);
 
             //gmScr.EndGame(); // WILL DISPLAY ENDING SCENE AND RESTART LEVEL
-            EndLevel();
+            playSound = EndLevel(playSound);
         }
 
         else if (currentSeconds <= 20f) // display the warning for 20 seconds
@@ -73,8 +77,14 @@ public class CountdownTimer : MonoBehaviour
 
         }
 
-        void EndLevel()
+        bool EndLevel(bool play)
         {
+            if (play)
+            {
+                PlayEndSound();
+                UpdateScores();
+                play = false;
+            }
             endScreenImageCanvasGroup.interactable = true;
             endScreenImageCanvasGroup.blocksRaycasts = true; // Image can block UI now
             timer += Time.deltaTime;
@@ -85,7 +95,14 @@ public class CountdownTimer : MonoBehaviour
                 gmScr.EndGame();
 
             }
+            return play;
         }
+    }
+
+    void PlayEndSound()
+    {
+        if (loseSound)
+            soundSource.PlayOneShot(loseSound, 1);
     }
 
     public void UpdateScores()

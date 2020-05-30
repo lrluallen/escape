@@ -9,6 +9,11 @@ public class ItemCollect : MonoBehaviour
     GameManager gmscr;
     // Item name
     public string Identity;
+    // Source to play the sound
+    public AudioSource soundSource;
+    // Sounds
+    public AudioClip pickUp;
+    public AudioClip useWrong;
     // Item image
     public Sprite icon;
     // Don't Disable item when picked up?
@@ -25,6 +30,8 @@ public class ItemCollect : MonoBehaviour
             gmscr = other.GetComponent<ItemHandler>().GetManager();
             // Process the item
             other.GetComponent<ItemHandler>().processItem(Identity, this);
+            if(pickUp)
+                soundSource.PlayOneShot(pickUp, 1);
             
         }
     }
@@ -35,7 +42,13 @@ public class ItemCollect : MonoBehaviour
         if (gmscr.isin)
         {
             Debug.Log("Using item: " + Identity);
-            gmscr.builder.RemoveItem(this);
+            if (!gmscr.builder.RemoveItem(this) && useWrong) // Remove item from build recipe
+                soundSource.PlayOneShot(useWrong, 1); // incorrect use sound
+        }
+        else
+        {
+            if(useWrong)
+                soundSource.PlayOneShot(useWrong, 1); // incorrect use sound
         }
     }
 }

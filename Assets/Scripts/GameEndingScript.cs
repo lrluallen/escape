@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameEndingScript : MonoBehaviour
 {
+    public AudioSource soundSource;
+    public AudioClip winSound;
     public float fadeDuration = 1f; // fade duration is initialized to one second
     public GameObject player; // to see if we collided
                               /* public bool foundJournal = false; This condition should be met to ensure our player can't just skip the level without the journal in the final build */
@@ -35,6 +37,8 @@ public class GameEndingScript : MonoBehaviour
             BackgroundImageCanvasGroup.blocksRaycasts = true;
             BackgroundImageCanvasGroup.interactable = true;
             gameEnded = true;
+            if (winSound)
+                soundSource.PlayOneShot(winSound, 1);
         }
 
     }

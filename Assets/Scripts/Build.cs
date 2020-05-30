@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Build : MonoBehaviour
 {
+    public AudioSource soundSource;
+    public AudioClip buildComplete;
+    public AudioClip useRight;
     public List<ItemCollect> recipe;
     public GameObject[] targets;
+
 
     GameManager gmScr;
 
@@ -30,8 +34,9 @@ public class Build : MonoBehaviour
     }
 
     // Remove item from recipe
-    public void RemoveItem(ItemCollect item)
+    public bool RemoveItem(ItemCollect item)
     {
+        bool success = false;
         for (int i = 0; i < recipe.Count; ++i)
         {
             Debug.Log("Looking at: " + recipe[i]);
@@ -39,11 +44,15 @@ public class Build : MonoBehaviour
             {
                 recipe.Remove(recipe[i]);
                 Debug.Log("Removed: " + item.Identity);
+                if(useRight)
+                    soundSource.PlayOneShot(useRight, 1);
+                success = true;
                 break;
             }
         }
         if (recipe.Count == 0)
             ToggleItems();
+        return success;
     }
 
     // Recipe has been fulfilled, so 'build' object
@@ -51,6 +60,8 @@ public class Build : MonoBehaviour
     {
         for (int i = 0; i < targets.Length; ++i)
             targets[i].SetActive(!targets[i].activeSelf);
+        if (buildComplete) // Check if a sound is supplied
+            soundSource.PlayOneShot(buildComplete, 1); // Build complete sound
         // Turn self off after item is built
         gmScr.isin = false;
         gmScr.builder = null;
