@@ -36,7 +36,7 @@ public class CheckItemsUsed : MonoBehaviour
                     if (!slot.CheckSlot() && slot.GetItem().Identity == itemsToCheck[j].Identity)
                     {
                         // Item is in inventory
-                        Debug.Log("Item is in inventory");
+                        //Debug.Log("Item is in inventory");
                         return;
                     }
                 }
@@ -51,13 +51,13 @@ public class CheckItemsUsed : MonoBehaviour
                     if (itemsToCheck[j].Identity == itemsInScene[i].Identity && itemsInScene[i].isActiveAndEnabled)
                     {
                         // Item is in scene
-                        Debug.Log("Item is in scene");
+                        //Debug.Log("Item is in scene");
                         return;
                     }
                 }
             }
             // Items were used incorrectly
-            Debug.Log("You Lose");
+            //Debug.Log("You Lose");
             lose = true;
         }
 

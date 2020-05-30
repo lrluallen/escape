@@ -19,7 +19,6 @@ public class Build : MonoBehaviour
     int index = 0; 
     public int stepSize = 1; // how many items to be built per correct item use
 
-
     GameManager gmScr;
 
     private void OnTriggerEnter(Collider other)
@@ -54,12 +53,12 @@ public class Build : MonoBehaviour
         for (int i = 0; i < recipe.Count; ++i)
         {
             // Check if item is in recipe
-            Debug.Log("Looking at: " + recipe[i]);
+            //Debug.Log("Looking at: " + recipe[i]);
             if (recipe[i].Identity == item.Identity)
             {
                 // Remove the item from the recipe
                 recipe.Remove(recipe[i]);
-                Debug.Log("Removed: " + item.Identity);
+                //Debug.Log("Removed: " + item.Identity);
                 // Play sound
                 if (useRight)
                     soundSource.PlayOneShot(useRight, 1);

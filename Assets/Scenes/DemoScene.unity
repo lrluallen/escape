@@ -1938,7 +1938,7 @@ CanvasGroup:
   m_GameObject: {fileID: 669366203}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &669366206
@@ -3062,6 +3062,8 @@ MonoBehaviour:
   targets:
   - {fileID: 659372520}
   - {fileID: 413730865}
+  stepBuild: 0
+  stepSize: 1
 --- !u!135 &920555882
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4017,6 +4019,8 @@ MonoBehaviour:
   targets:
   - {fileID: 413730865}
   - {fileID: 920555880}
+  stepBuild: 0
+  stepSize: 1
 --- !u!135 &1190802927
 SphereCollider:
   m_ObjectHideFlags: 0
