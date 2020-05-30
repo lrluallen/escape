@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Build : MonoBehaviour
 {
+    /*
+    This script takes a recipe, checks if the player 
+    correctly fills the recipe, and builds
+    the targets
+    */
+
     public AudioSource soundSource;
-    public AudioClip buildComplete;
-    public AudioClip useRight;
-    public List<ItemCollect> recipe;
-    public GameObject[] targets;
-    public bool stepBuild = false;
-    int index = 0;
-    public int stepSize = 1;
+    public AudioClip buildComplete; // Build is done
+    public AudioClip useRight; // item was in recipe
+    public List<ItemCollect> recipe; // items required to build
+    public GameObject[] targets; // things to be built
+    public bool stepBuild = false; // build for each recipe item given vs build all at end
+    int index = 0; 
+    public int stepSize = 1; // how many items to be built per correct item use
 
 
     GameManager gmScr;
@@ -20,7 +26,9 @@ public class Build : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            // get GameManager
             gmScr = other.GetComponent<ItemHandler>().GetManager();
+            // Update manager to know we are in a build, and which one
             gmScr.isin = true;
             gmScr.builder = this;
         }
@@ -31,6 +39,7 @@ public class Build : MonoBehaviour
         if (other.tag == "Player")
         {
             gmScr = other.GetComponent<ItemHandler>().GetManager();
+            // Update manager that player is no longer in a build
             gmScr.isin = false;
             gmScr.builder = null;
         }
@@ -39,27 +48,35 @@ public class Build : MonoBehaviour
     // Remove item from recipe
     public bool RemoveItem(ItemCollect item)
     {
+        // At least one item was removed
         bool success = false;
+        // Loop through the recipe
         for (int i = 0; i < recipe.Count; ++i)
         {
+            // Check if item is in recipe
             Debug.Log("Looking at: " + recipe[i]);
             if (recipe[i].Identity == item.Identity)
             {
+                // Remove the item from the recipe
                 recipe.Remove(recipe[i]);
                 Debug.Log("Removed: " + item.Identity);
-                if(useRight)
+                // Play sound
+                if (useRight)
                     soundSource.PlayOneShot(useRight, 1);
+                // A item was removed
                 success = true;
                 break;
             }
         }
         if (stepBuild && success)
         {
+            // 'Build' step amount of items
             index = ToggleStep(index);
         }
 
         if (recipe.Count == 0)
         {
+            // 'Build' all unbuilt items
             ToggleItems(index);
         }
         return success;
@@ -68,17 +85,22 @@ public class Build : MonoBehaviour
     // Recipe has been fulfilled, so 'build' object
     void ToggleItems(int index)
     {
+        // Loop through all items in targets and swap their active status
         for (int i = index; i < targets.Length; ++i)
             targets[i].SetActive(!targets[i].activeSelf);
+        // Turn off this build
         DisableBuild();
 
     }
 
+    // Step Build
     int ToggleStep(int index)
     {
         int length = index + stepSize;
+        // Loop through all targets to be 'built'
         for (; index < length; ++index)
         {
+            //'build' targets by swapping their active status
             targets[index].SetActive(!targets[index].activeSelf);
         }
         return index;

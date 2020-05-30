@@ -11,17 +11,17 @@ public class GameManager : MonoBehaviour
     public float displayImageDuration = 1f;
     float timerThing;
 
-    public CountdownTimer timer; 
+    public CountdownTimer timer;
     // Journal entry text
     public TextAsset[] entries;
-    
+
     // Is journal unlocked
     public bool journal = false;
     bool jState;
-    
+
     // Current index of unlocked for page being read
     public int currIndex = 0;
-    
+
     // Which entries have been unlocked
     public List<int> unlocked = new List<int>();
     List<int> uState;
@@ -38,6 +38,15 @@ public class GameManager : MonoBehaviour
     // Build area player is in
     public Build builder;
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // TODO: Menu here
+            Application.Quit(); // Quit game
+        }
+    }
+
     private void Awake()
     {
         // First entry is always unlocked, the rest start locked
@@ -53,22 +62,16 @@ public class GameManager : MonoBehaviour
     }
 
     // Called at the end of the level to reset progress
-    public void ClearProgress()
+    public void ClearProgress(bool full = false)
     {
-        //journal = jState; (If we change to per level restart)
-        journal = false;
-        unlocked = new List<int>(uState);
+        if (full) // Full reset
+        {
+            journal = false;
+            unlocked = new List<int>(uState);
+        }
+        else // Level reset
+            journal = jState;
         currIndex = 0;
-    }
-
-    public void EndGame()
-    {
-        Debug.Log("Game Over");
-        ClearProgress();
-        // End Game Image Displayed in GameEnd script!
-        Restart();
-        
-
     }
 
     /*
@@ -77,13 +80,4 @@ public class GameManager : MonoBehaviour
         
     }
     */
-
-    public void Restart()
-    {
-
-        SceneManager.LoadScene("StartScene"); // Give user option to choose to play again instead of loading them right back into the game
-
-    }
-
-
 }

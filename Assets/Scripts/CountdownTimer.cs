@@ -50,7 +50,7 @@ public class CountdownTimer : MonoBehaviour
             playSound = EndLevel(playSound);
         }
 
-        else if (currentSeconds <= 20f) // display the warning for 20 seconds
+        else if (currentSeconds <= 30f) // display the warning for 30 seconds
         {
             currentSeconds -= 1f * Time.deltaTime; // calcualte current seconds
             countdownText.text = "HURRY! YOU HAVE " + currentSeconds.ToString("0") + " SECONDS LEFT!\n"; //display the 20 second warning first
@@ -59,50 +59,40 @@ public class CountdownTimer : MonoBehaviour
 
 
 
-        else // currentSeconds > 20f
+        else // currentSeconds > 30f
         {
             // else, just calcualte the current seconds 
             currentSeconds -= 1f * Time.deltaTime;
+            
             // How many minutes left, +1 since <1 == 1 minute left generally 
             mLeft = ((int)currentSeconds / 60) + 1;
 
-            if (mLeft <= 0)
-            {
-                countdownText.text = "YOU HAVE LESS THAN ONE MINUTE LEFT!\n";
-            }
-           
             // Check if Minute should be plural or not
             Mins = mLeft <= 1 ? " MINUTE LEFT!" : " MINUTES LEFT!"; // Ohhhh look at the ternary operator...
-            countdownText.text = "YOU HAVE " + mLeft.ToString("0") + Mins;
+            countdownText.text = "YOU HAVE " + mLeft.ToString() + Mins;
 
-        }
-
-        bool EndLevel(bool play)
-        {
-            if (play)
-            {
-                PlayEndSound();
-                UpdateScores();
-                play = false;
-            }
-            endScreenImageCanvasGroup.interactable = true;
-            endScreenImageCanvasGroup.blocksRaycasts = true; // Image can block UI now
-            timer += Time.deltaTime;
-            endScreenImageCanvasGroup.alpha = timer / fadeDuration;
-            if (timer > fadeDuration + displayImageDuration)
-            {
-
-                gmScr.EndGame();
-
-            }
-            return play;
         }
     }
 
-    void PlayEndSound()
+    public bool EndLevel(bool play)
     {
-        if (loseSound)
-            soundSource.PlayOneShot(loseSound, 1);
+        if (play) // play lose sound
+        {
+            if (loseSound)
+                soundSource.PlayOneShot(loseSound, 1);
+            UpdateScores(); // update high(low) score
+            play = false;
+        }
+        endScreenImageCanvasGroup.interactable = true;
+        endScreenImageCanvasGroup.blocksRaycasts = true; // Image can block UI now
+        timer += Time.deltaTime;
+        endScreenImageCanvasGroup.alpha = timer / fadeDuration;
+        if (timer > fadeDuration + displayImageDuration)
+        {
+            gmScr.ClearProgress(); // Reset progress
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload this level
+        }
+        return play;
     }
 
     public void UpdateScores()

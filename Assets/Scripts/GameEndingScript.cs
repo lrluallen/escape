@@ -58,7 +58,7 @@ public class GameEndingScript : MonoBehaviour
         if (timer > fadeDuration + displayImageDuration)
         {
             if (finalLevel)
-                gmScr.ClearProgress(); // Reset Journal
+                gmScr.ClearProgress(true); // Reset Journal
             SceneManager.LoadScene(sceneToLoad); // Load next scene
 
         }

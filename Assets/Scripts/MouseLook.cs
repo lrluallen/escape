@@ -36,17 +36,21 @@ public class MouseLook : MonoBehaviour
             playerBody.Rotate(Vector3.up * mouseX);
         }
         // Check for input to activate/deactivate mouse
+
+        // Open inventory using 'i'
         if (Input.GetKeyDown(KeyCode.I))
         {
             moveState = ChangeState(moveState);
             iButton.onClick.Invoke();
         }
+        // Open Journal using 'j', if journal is active
         else if (Input.GetKeyDown(KeyCode.J) && jButton.isActiveAndEnabled)
         {
             moveState = ChangeState(moveState);
             jButton.onClick.Invoke();
         }
-    
+        
+        // Use 'TAB' to swap states
         else if (Input.GetKeyDown(KeyCode.Tab) && press)
         {
             moveState = ChangeState(moveState);
@@ -66,9 +70,8 @@ public class MouseLook : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             mode.text = "Mode:\nInventory";
-            // deactivate mouse
         }
-        else
+        else // deactivate mouse
         {
             Cursor.lockState = CursorLockMode.Locked;
             mode.text = "Mode:\nLook";
