@@ -20408,8 +20408,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monologueTextField: {fileID: 377153431}
   persists: 0
-  text: Ah cleanlieness is it's own reward. I should probably set my tent up now.
-    Where did I put those stakes...
+  text: Ah cleanlieness is it's own reward. I should probably set my tent up now,
+    maybe by that log with my backpack? Now where did I put those tent stakes...
 --- !u!135 &795000163
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -44678,6 +44678,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3845086356237271680, guid: 44f5a822c965d094fb3c2300595ff111,
+        type: 3}
+      propertyPath: soundSource
+      value: 
+      objectReference: {fileID: 1922469564}
     - target: {fileID: 1290878316376945729, guid: 44f5a822c965d094fb3c2300595ff111,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44748,11 +44753,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 3845086356237271680, guid: 44f5a822c965d094fb3c2300595ff111,
-        type: 3}
-      propertyPath: soundSource
-      value: 
-      objectReference: {fileID: 1922469564}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44f5a822c965d094fb3c2300595ff111, type: 3}
 --- !u!4 &2313523991734449930 stripped
