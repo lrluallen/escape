@@ -17,7 +17,7 @@ public class HighScore : MonoBehaviour
         string speedVals = "Top Speeds:\n";
         for (int i = 0; i < gmScr.speeds.Length; ++i)
         {
-            speedVals += string.Format("Level {0} | {1:D2}:{2:D2} |\n", i, (int)gmScr.speeds[i]/60, gmScr.speeds[i] % 60);
+            speedVals += string.Format("Level {0} | {1:D2}:{2:D2} |\n", i, gmScr.speeds[i]/60, gmScr.speeds[i] % 60);
         }
         speedsText.text = speedVals;
     }

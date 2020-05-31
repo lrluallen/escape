@@ -41,7 +41,7 @@ public class ItemCollect : MonoBehaviour
         // Check if player is in build area
         if (gmscr.isin)
         {
-            Debug.Log("Using item: " + Identity);
+            //Debug.Log("Using item: " + Identity);
             if (!gmscr.builder.RemoveItem(this) && useWrong) // Remove item from build recipe
                 soundSource.PlayOneShot(useWrong, 1); // incorrect use sound
         }

@@ -15,7 +15,7 @@ public class GameEndingScript : MonoBehaviour
     public bool finalLevel = false; // If this is the final level (and journal should be reset)
     float timer;
     public float displayImageDuration = 4f; // How long the image displays
-    bool gameEnded = false;
+    bool gameEnded = false; // Check if player has won
     CountdownTimer timeScr; // For updating high(low) score
     GameManager gmScr; // For resetting journal on final level
 
@@ -39,6 +39,8 @@ public class GameEndingScript : MonoBehaviour
             gameEnded = true;
             if (winSound)
                 soundSource.PlayOneShot(winSound, 1);
+            // Update high(low) scores
+            timeScr.UpdateScores();
         }
 
     }
@@ -51,8 +53,6 @@ public class GameEndingScript : MonoBehaviour
 
     void EndLevel()
     {
-        // Update high(low) scores
-        timeScr.UpdateScores();
         timer += Time.deltaTime;
         BackgroundImageCanvasGroup.alpha = timer / fadeDuration;
         if (timer > fadeDuration + displayImageDuration)

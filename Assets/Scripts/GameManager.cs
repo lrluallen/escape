@@ -14,8 +14,12 @@ public class GameManager : MonoBehaviour
     public CountdownTimer timer;
     */
     
-        // Base speeds for speed runs
+    // Base speeds for speed runs
     public int[] speeds = {600, 300, 210};
+    // For indexing speeds
+    public int currentLevel = 0;
+    // For restting index
+    public int levelCount = 3;
 
     // Journal entry text
     public TextAsset[] entries;

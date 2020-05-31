@@ -20,6 +20,7 @@ public class CountdownTimer : MonoBehaviour
     public float displayImageDuration = 1f;
 
     bool playSound = true;
+    float speedTime = 0;
 
     // manager script
     GameManager gmScr;
@@ -72,6 +73,7 @@ public class CountdownTimer : MonoBehaviour
             countdownText.text = "YOU HAVE " + mLeft.ToString() + Mins;
 
         }
+        speedTime += 1f * Time.deltaTime;
     }
 
     public bool EndLevel(bool play)
@@ -80,7 +82,6 @@ public class CountdownTimer : MonoBehaviour
         {
             if (loseSound)
                 soundSource.PlayOneShot(loseSound, 1);
-            UpdateScores(); // update high(low) score
             play = false;
         }
         endScreenImageCanvasGroup.interactable = true;
@@ -97,7 +98,9 @@ public class CountdownTimer : MonoBehaviour
 
     public void UpdateScores()
     {
-        // TODO: Have this function update high(low) scores, and save them in the GameManager script
+        //Debug.Log("updating score");
+        gmScr.speeds[gmScr.currentLevel] = Mathf.Min((int)speedTime, gmScr.speeds[gmScr.currentLevel]);
+        gmScr.currentLevel = (gmScr.currentLevel + 1) % gmScr.levelCount;
     }
 
     public void FoundMask()
