@@ -6,12 +6,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    /*
     public float fadeDuration = 1f;
     public CanvasGroup flewTheCoopSuccessImage;
     public float displayImageDuration = 1f;
     float timerThing;
-
     public CountdownTimer timer;
+    */
+    
+        // Base speeds for speed runs
+    public int[] speeds = {600, 300, 210};
+
     // Journal entry text
     public TextAsset[] entries;
 
