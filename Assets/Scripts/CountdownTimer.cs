@@ -12,6 +12,7 @@ public class CountdownTimer : MonoBehaviour
     public float startingSeconds = 300f;
     public float maskSeconds = 300f;
     public Text countdownText;
+    public Text timeTakenText;
     public int mLeft;
     string Mins;
 
@@ -73,7 +74,9 @@ public class CountdownTimer : MonoBehaviour
             countdownText.text = "YOU HAVE " + mLeft.ToString() + Mins;
 
         }
+        timeTakenText.text = string.Format("Time Taken: {0:D2}:{1:D2}", (int)speedTime / 60, (int)speedTime % 60);
         speedTime += 1f * Time.deltaTime;
+        
     }
 
     public bool EndLevel(bool play)

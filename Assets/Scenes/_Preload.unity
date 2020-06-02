@@ -150,11 +150,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1376a2d165a9ded4280eb17866c185b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  speeds: 580200002c010000d2000000
+  currentLevel: 0
+  levelCount: 3
   entries:
   - {fileID: 4900000, guid: 0181468e3793a3e41931b62aca89e574, type: 3}
   - {fileID: 4900000, guid: 1ef71391a704dea43b5f2752d4b779c4, type: 3}
   - {fileID: 4900000, guid: 5778e2037f5d2eb48933fcb40489db67, type: 3}
+  - {fileID: 4900000, guid: e85c406676a56624f90d6039b1a448a7, type: 3}
   journal: 0
   currIndex: 0
   unlocked: 
