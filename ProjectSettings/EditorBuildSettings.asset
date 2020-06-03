@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: 299e1b193176de24985e07bf254c34e9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DemoScene.unity
     guid: af2587ab60250614f864cf9b9d06cd6a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/CampScene.unity
     guid: 284a4b14b118e2f4185cca9537c74547
   - enabled: 1

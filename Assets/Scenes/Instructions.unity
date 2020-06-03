@@ -798,7 +798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -160}
+  m_AnchoredPosition: {x: 0, y: -150}
   m_SizeDelta: {x: 700, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583400245
@@ -834,11 +834,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "* INVENTORY / JOURNAL *\nUse \"i\" to open your inventory.\nUse \"j\" to
-    read the journal you'll find in the campsite level.\nUsing the \"i\" and \"j\"
-    shortcuts automatically toggles your mouse to be able to click instead of moving
-    the camera, but you can use TAB at any time if you wish to actually click the
-    icons. \n\n"
+  m_Text: "* INVENTORY / JOURNAL *\nUse \"p\" to pause / resume the game\nUse \"i\"
+    to open your inventory.\nUse \"j\" to read the journal you'll find in the campsite
+    level.\nUsing the \"i\" and \"j\" shortcuts automatically toggles your mouse to
+    be able to click instead of moving the camera, but you can use TAB at any time
+    if you wish to actually click the icons. \n\n"
 --- !u!222 &1583400246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -980,7 +980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -340}
+  m_AnchoredPosition: {x: 0, y: -350}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673974481
@@ -1005,7 +1005,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 01cd679a1b9ee48bf9c546f6ce2cb97e, type: 3}
-    m_FontSize: 15
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
