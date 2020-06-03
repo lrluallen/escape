@@ -13,7 +13,10 @@ public class GameManager : MonoBehaviour
     float timerThing;
     public CountdownTimer timer;
     */
-    
+
+    // Mouse sensitivity
+    public int sensitivity = 100;
+
     // Base speeds for speed runs
     public int[] speeds = {600, 300, 210};
     // For indexing speeds
@@ -46,15 +49,6 @@ public class GameManager : MonoBehaviour
 
     // Build area player is in
     public Build builder;
-
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // TODO: Menu here
-            Application.Quit(); // Quit game
-        }
-    }
 
     private void Awake()
     {

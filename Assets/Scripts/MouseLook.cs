@@ -5,17 +5,24 @@ using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    //public float mouseSensitivity = 100f;
     public Transform playerBody;
     float xRotation = 0f;
-    bool moveState;
+    public bool moveState;
     bool press;
     public Text mode;
-        public Button iButton;
+    public Button iButton;
     public Button jButton;
+
+    GameObject initObj;
+    GameManager gmScr;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        initObj = GameObject.FindGameObjectWithTag("Init");
+        gmScr = initObj.GetComponent<GameManager>();
         Cursor.lockState = CursorLockMode.Locked;
         moveState = true;
         press = true;
@@ -27,8 +34,8 @@ public class MouseLook : MonoBehaviour
         if (moveState)
         {
             // Mouse controls camera
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            float mouseX = Input.GetAxis("Mouse X") * gmScr.sensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * gmScr.sensitivity * Time.deltaTime;
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
